@@ -16,10 +16,10 @@
 
 <style>
 :root {
-  --color-main: #b91c1c;
-  --color-dark: #7f1d1d;
-  --color-light: #fef2f2;
-  --color-border: #fecaca;
+  --color-main: #d4af37;
+--color-dark: #111111;
+--color-light: #fff8e1;
+--color-border: #d4af37;
   --dark: #0f172a;
   --muted: #64748b;
   --white: #ffffff;
@@ -55,9 +55,18 @@ nav { position: sticky; top: 0; z-index: 999; background: var(--white); border-b
 @media (max-width: 640px) { .nav-links { display: none; } .burger { display: flex; } }
 
 /* ── HERO ── */
-.hero { background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-main) 100%); padding: 60px 20px 80px; text-align: center; }
-.hero-inner { max-width: 640px; margin: 0 auto; }
-.hero-logo { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 4px solid rgba(255,255,255,0.4); box-shadow: 0 8px 40px rgba(0,0,0,0.2); margin: 0 auto 20px; background: white; }
+.hero {
+  background: linear-gradient(
+    135deg,
+    #000000 0%,
+    #1a1a1a 70%,
+    #d4af37 100%
+  );
+  padding: 60px 20px 80px;
+  text-align: center;
+}
+  .hero-inner { max-width: 640px; margin: 0 auto; }
+.hero-logo { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 4px solid #d4af37; box-shadow: 0 8px 40px rgba(0,0,0,0.2); margin: 0 auto 20px; background: white; }
 .hero h1 { font-size: 38px; font-weight: 900; color: white; line-height: 1.1; margin-bottom: 12px; }
 .hero-tagline { display: inline-block; font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.9); background: rgba(255,255,255,0.15); border-radius: 20px; padding: 5px 18px; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.25); }
 .hero-contact { margin-bottom: 20px; }
