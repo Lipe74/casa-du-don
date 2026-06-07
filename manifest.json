@@ -5,12 +5,16 @@
   "start_url": "/index.html",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#7f1d1d",
-  "theme_color": "#b91c1c",
+
+  "background_color": "#111111",
+  "theme_color": "#111111",
+
   "orientation": "portrait",
   "lang": "fr",
   "id": "la-casa-du-don-chaudfontaine",
+
   "categories": ["food", "restaurants"],
+
   "shortcuts": [
     {
       "name": "Réserver une table",
@@ -34,6 +38,7 @@
       "icons": [{ "src": "images/logo.png", "sizes": "192x192" }]
     }
   ],
+
   "icons": [
     {
       "src": "images/logo.png",
@@ -42,6 +47,7 @@
       "purpose": "any maskable"
     }
   ],
+
   "screenshots": [
     {
       "src": "images/plat01.jpg",
