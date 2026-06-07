@@ -206,7 +206,8 @@ footer { background: var(--color-light); border-top: 2px solid var(--color-borde
     </a>
     <div class="nav-links">
       <a href="#">&#127968; Accueil</a>
-      <a href="#carte">&#127869; Carte &amp; Plats</a>
+      <a href="#carte">&#127869; Carte</a>
+      <a href="#plats">&#127829; Nos Plats</a>
       <a href="evenements.html">&#127881; &#201;v&#233;nements</a>
       <a href="#avis">&#11088; Avis</a>
       <a href="#contact">&#128203; R&#233;server</a>
@@ -219,7 +220,8 @@ footer { background: var(--color-light); border-top: 2px solid var(--color-borde
   </div>
   <div class="mobile-menu" id="mobileMenu">
     <a href="#" onclick="toggleMenu()">&#127968; Accueil</a>
-    <a href="#carte" onclick="toggleMenu()">&#127869; Carte &amp; Plats</a>
+    <a href="#carte" onclick="toggleMenu()">&#127869; Carte</a>
+    <a href="#plats" onclick="toggleMenu()">&#127829; Nos Plats</a>
     <a href="evenements.html">&#127881; &#201;v&#233;nements</a>
     <a href="#avis" onclick="toggleMenu()">&#11088; Avis</a>
     <a href="#contact" onclick="toggleMenu()">&#128203; R&#233;server</a>
@@ -247,7 +249,7 @@ footer { background: var(--color-light); border-top: 2px solid var(--color-borde
     <p class="hero-desc">Bienvenue &#224; La Casa du Don, restaurant italien authentique au c&#339;ur de Chaudfontaine. Cuisine sicilienne maison, portions g&#233;n&#233;reuses, ambiance familiale et chaleureuse &mdash; comme si vous &#233;tiez en Italie&#160;!</p>
     <div class="hero-btns">
       <a href="tel:+32472284063" class="btn-wa">&#128222; R&#233;server une table</a>
-      <a href="#carte" class="btn-main">&#127869; Carte &amp; Plats</a>
+      <a href="#carte" class="btn-main">&#127869; Notre carte</a>
     </div>
   </div>
 </div>
@@ -255,8 +257,6 @@ footer { background: var(--color-light); border-top: 2px solid var(--color-borde
 <!-- ═══════ NOTRE CARTE ═══════ -->
 <div class="section bg-white" id="carte">
   <div class="section-inner">
-
-    <!-- CARROUSEL IMAGES CARTE -->
     <div class="section-label">Notre Carte</div>
     <h2 class="section-title">Notre menu en images</h2>
     <div class="carousel-wrap">
@@ -277,43 +277,39 @@ footer { background: var(--color-light); border-top: 2px solid var(--color-borde
     </div>
     <div class="carousel-dots" id="carteDots"></div>
     <div class="carousel-counter" id="carteCounter">1 / 8</div>
+  </div>
+</div>
 
-    <!-- GALERIE PLATS -->
-    <div style="margin-top: 56px;">
-      <div class="section-label">Nos Plats</div>
-      <h3 style="text-align:center; font-size:26px; font-weight:900; color:var(--dark); margin-bottom:28px;">La cuisine en images</h3>
-      <div class="gallery-grid">
-        <div class="gallery-item" onclick="openLightbox(0)" style="cursor:pointer;">
-          <img src="images/plat01.jpg" alt="Plat La Casa du Don" loading="lazy">
-          <div class="gallery-caption">&#127829; Sp&#233;cialit&#233; maison</div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox(1)" style="cursor:pointer;">
-          <img src="images/plat02.jpg" alt="Plat La Casa du Don" loading="lazy">
-          <div class="gallery-caption">&#127837; P&#226;tes siciliennes</div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox(2)" style="cursor:pointer;">
-          <img src="images/plat03.jpg" alt="Plat La Casa du Don" loading="lazy">
-          <div class="gallery-caption">&#129385; Viandes &amp; grillades</div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox(3)" style="cursor:pointer;">
-          <img src="images/plat04.jpg" alt="Plat La Casa du Don" loading="lazy">
-          <div class="gallery-caption">&#129345; Antipasti</div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox(4)" style="cursor:pointer;">
-          <img src="images/plat05.jpg" alt="Plat La Casa du Don" loading="lazy">
-          <div class="gallery-caption">&#127856; Desserts maison</div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox(5)" style="cursor:pointer;">
-          <img src="images/plat06.jpg" alt="Plat La Casa du Don" loading="lazy">
-          <div class="gallery-caption">&#127863; Vins &amp; boissons</div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox(6)" style="cursor:pointer;">
-          <img src="images/plat07.jpg" alt="Plat La Casa du Don" loading="lazy">
-          <div class="gallery-caption">&#127859; Suggestion du chef</div>
-        </div>
+<div class="divider"></div>
+
+<!-- ═══════ NOS PLATS ═══════ -->
+<div class="section" id="plats">
+  <div class="section-inner">
+    <div class="section-label">Nos Plats</div>
+    <h2 class="section-title">La cuisine en images</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item" onclick="openLightbox(0)" style="cursor:pointer;">
+        <img src="images/plat01.jpg" alt="Plat La Casa du Don" loading="lazy">
+      </div>
+      <div class="gallery-item" onclick="openLightbox(1)" style="cursor:pointer;">
+        <img src="images/plat02.jpg" alt="Plat La Casa du Don" loading="lazy">
+      </div>
+      <div class="gallery-item" onclick="openLightbox(2)" style="cursor:pointer;">
+        <img src="images/plat03.jpg" alt="Plat La Casa du Don" loading="lazy">
+      </div>
+      <div class="gallery-item" onclick="openLightbox(3)" style="cursor:pointer;">
+        <img src="images/plat04.jpg" alt="Plat La Casa du Don" loading="lazy">
+      </div>
+      <div class="gallery-item" onclick="openLightbox(4)" style="cursor:pointer;">
+        <img src="images/plat05.jpg" alt="Plat La Casa du Don" loading="lazy">
+      </div>
+      <div class="gallery-item" onclick="openLightbox(5)" style="cursor:pointer;">
+        <img src="images/plat06.jpg" alt="Plat La Casa du Don" loading="lazy">
+      </div>
+      <div class="gallery-item" onclick="openLightbox(6)" style="cursor:pointer;">
+        <img src="images/plat07.jpg" alt="Plat La Casa du Don" loading="lazy">
       </div>
     </div>
-
   </div>
 </div>
 
@@ -376,6 +372,45 @@ footer { background: var(--color-light); border-top: 2px solid var(--color-borde
           <div class="review-date">Mars 2026</div>
         </div>
         <p class="review-text">&#171;&#160;Premi&#232;re visite en famille. Points positifs&#160;: ambiance sympathique, espace entre les tables, prix tr&#232;s corrects, grand parking. Content d&#8217;y avoir &#233;t&#233;, une bonne adresse italienne &#224; Chaudfontaine.&#160;&#187;</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">MP</div>
+          <div><div class="review-name">Ma&#239;lys Polome</div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
+          <div class="review-date">Mars 2026</div>
+        </div>
+        <p class="review-text">&#171;&#160;Nous avons pass&#233; un excellent moment. Les plats &#233;taient savoureux, bien pr&#233;sent&#233;s et g&#233;n&#233;reux. Le personnel est attentif et souriant, ce qui rend l&#8217;exp&#233;rience encore plus agr&#233;able. L&#8217;ambiance est conviviale et on s&#8217;y sent bien. Une tr&#232;s belle adresse &#224; d&#233;couvrir&#160;!&#160;&#187;</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">FG</div>
+          <div><div class="review-name">fionaglm</div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
+          <div class="review-date">Mars 2026</div>
+        </div>
+        <p class="review-text">&#171;&#160;Juste extraordinaire. Service impeccable et j&#8217;ai mang&#233; la meilleure escalope du monde. Le cadre est magnifique. Le patron vraiment gentil. Restaurant au top &#224; tout niveau.&#160;&#187;</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">LR</div>
+          <div><div class="review-name">Liliane Rodrigues</div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
+          <div class="review-date">Avr. 2026</div>
+        </div>
+        <p class="review-text">&#171;&#160;Accueil toujours souriant et sympathique, le cadre magnifique avec une belle musique d&#8217;ambiance. Les plats sont d&#233;licieux et ont le vrai go&#251;t du fait maison.&#160;&#187;</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">KL</div>
+          <div>
+            <div class="review-name">Kevin Lantin <span style="font-size:10px; color:var(--muted); font-weight:600;">&#183; Local Guide</span></div>
+            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          </div>
+          <div class="review-date">Mars 2026</div>
+        </div>
+        <p class="review-text">&#171;&#160;Restaurant tr&#232;s sympa&#160;! Accueil exceptionnel et cuisine d&#233;licieuse, le tout avec des assiettes tr&#232;s g&#233;n&#233;reuses. Je recommande&#160;!&#160;&#187;</p>
       </div>
 
     </div>
