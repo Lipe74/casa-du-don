@@ -4,9 +4,9 @@
                 Network First pour les pages HTML
    ============================================================ */
 
-const CACHE_NAME = 'lacasadudon-v5';
-const CACHE_STATIC = 'lacasadudon-static-v5';
-const CACHE_IMAGES = 'lacasadudon-images-v5';
+const CACHE_NAME = 'lacasadudon-v6';
+const CACHE_STATIC = 'lacasadudon-static-v6';
+const CACHE_IMAGES = 'lacasadudon-images-v6';
 
 /* ── Assets à mettre en cache immédiatement (App Shell) ── */
 const PRECACHE_URLS = [
