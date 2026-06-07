@@ -3,29 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- ============================================
-     TEMPLATE VITRINE – Phil-Fixit
-     CLIENT : La Casa du Don – Restaurant
-     ============================================
-     CHECKLIST à compléter :
-     [ ] Remplacer 0472 28 40 63
-     [ ] Remplacer david361227@gmail.com
-     [ ] Remplacer Esplanade 2, 4050 Chaudfontaine &ndash; Parking gratuit
-     [ ] Remplacer 32472284063 (numéro sans +)
-     [ ] Remplacer FORMSPREE_ID
-     [ ] Remplacer PLACE_ID (Google Maps)
-     [ ] Remplacer VIMEO_ID ou supprimer la section vidéo
-     [ ] Remplacer images/logo.png par le logo du restaurant
-     [ ] Adapter les horaires &Agrave; compl&eacute;ter
-     ============================================ -->
-
-<title>La Casa du Don – Restaurant</title>
-<meta name="description" content="La Casa du Don – Restaurant chaleureux et convivial. Réservez votre table ou commandez à emporter. Cuisine généreuse, ambiance unique.">
+<title>La Casa du Don &#8211; Restaurant Italien &#224; Chaudfontaine</title>
+<meta name="description" content="La Casa du Don &#8211; Restaurant italien authentique &#224; Chaudfontaine. Cuisine sicilienne maison, portions g&#233;n&#233;reuses, ambiance familiale. R&#233;servez au 0472 28 40 63.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-
-<!-- PWA -->
 <meta name="theme-color" content="#b91c1c">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -34,16 +15,11 @@
 <link rel="apple-touch-icon" href="images/logo.png">
 
 <style>
-/* ============================================
-   COULEURS – La Casa du Don
-   Rouge restaurant chaud et convivial
-   ============================================ */
 :root {
   --color-main: #b91c1c;
   --color-dark: #7f1d1d;
   --color-light: #fef2f2;
   --color-border: #fecaca;
-
   --dark: #0f172a;
   --muted: #64748b;
   --white: #ffffff;
@@ -53,12 +29,12 @@
   --max: 1100px;
   --shadow: 0 4px 24px rgba(0,0,0,0.08);
 }
-
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--dark); overflow-x: hidden; }
 img { max-width: 100%; display: block; }
 
+/* ── NAV ── */
 nav { position: sticky; top: 0; z-index: 999; background: var(--white); border-bottom: 3px solid var(--color-main); box-shadow: 0 2px 16px rgba(0,0,0,0.08); }
 .nav-inner { max-width: var(--max); margin: 0 auto; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; }
 .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
@@ -69,7 +45,6 @@ nav { position: sticky; top: 0; z-index: 999; background: var(--white); border-b
 .nav-links a:hover { color: var(--color-main); background: var(--color-light); }
 .nav-cta { background: var(--green) !important; color: white !important; padding: 8px 16px !important; border-radius: 10px !important; font-weight: 700 !important; display: flex !important; align-items: center; gap: 6px; }
 .nav-cta:hover { background: #1da851 !important; }
-
 .burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; border: none; background: none; }
 .burger span { display: block; width: 24px; height: 2px; background: var(--color-main); border-radius: 2px; transition: all 0.3s; }
 .mobile-menu { display: none; background: var(--white); border-top: 1px solid var(--color-border); padding: 12px 20px 16px; }
@@ -79,14 +54,15 @@ nav { position: sticky; top: 0; z-index: 999; background: var(--white); border-b
 .mob-cta { background: var(--green) !important; color: white !important; padding: 12px 16px !important; border-radius: 10px !important; text-align: center !important; border: none !important; }
 @media (max-width: 640px) { .nav-links { display: none; } .burger { display: flex; } }
 
-.hero { background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-main) 100%); padding: 60px 20px 80px; text-align: center; position: relative; }
+/* ── HERO ── */
+.hero { background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-main) 100%); padding: 60px 20px 80px; text-align: center; }
 .hero-inner { max-width: 640px; margin: 0 auto; }
 .hero-logo { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 4px solid rgba(255,255,255,0.4); box-shadow: 0 8px 40px rgba(0,0,0,0.2); margin: 0 auto 20px; background: white; }
 .hero h1 { font-size: 38px; font-weight: 900; color: white; line-height: 1.1; margin-bottom: 12px; }
 .hero-tagline { display: inline-block; font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.9); background: rgba(255,255,255,0.15); border-radius: 20px; padding: 5px 18px; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.25); }
 .hero-contact { margin-bottom: 20px; }
 .hero-contact a { display: inline-block; text-decoration: none; font-size: 17px; font-weight: 700; color: white; margin: 4px 8px; }
-.hero-contact span { display: block; font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 4px; }
+.hero-contact span { display: block; font-size: 12px; color: rgba(255,255,255,0.75); margin-top: 6px; line-height: 1.8; }
 .hero-desc { font-size: 15px; color: rgba(255,255,255,0.85); line-height: 1.7; margin-bottom: 28px; }
 .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; padding-bottom: 20px; }
 .btn-main { display: inline-flex; align-items: center; gap: 8px; background: white; color: var(--color-main); padding: 14px 24px; border-radius: 12px; font-size: 15px; font-weight: 800; text-decoration: none; transition: transform 0.2s; }
@@ -94,6 +70,7 @@ nav { position: sticky; top: 0; z-index: 999; background: var(--white); border-b
 .btn-wa { display: inline-flex; align-items: center; gap: 8px; background: var(--green); color: white; padding: 14px 24px; border-radius: 12px; font-size: 15px; font-weight: 800; text-decoration: none; box-shadow: 0 4px 20px rgba(37,211,102,0.4); transition: transform 0.2s; }
 .btn-wa:hover { transform: translateY(-2px); }
 
+/* ── SECTIONS ── */
 .section { padding: 60px 20px; }
 .section-inner { max-width: var(--max); margin: 0 auto; }
 .section-label { text-align: center; font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--color-main); margin-bottom: 8px; }
@@ -102,6 +79,7 @@ nav { position: sticky; top: 0; z-index: 999; background: var(--white); border-b
 .bg-light { background: var(--color-light); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); }
 .divider { height: 1px; background: var(--color-border); }
 
+/* ── CARTE (services) ── */
 .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
 .service-card { background: var(--bg); border: 1.5px solid var(--color-border); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: transform 0.2s, box-shadow 0.2s; }
 .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
@@ -112,11 +90,49 @@ nav { position: sticky; top: 0; z-index: 999; background: var(--white); border-b
 .service-body p { font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 14px; }
 .service-link { font-size: 13px; font-weight: 700; color: var(--color-main); text-decoration: none; }
 
-.video-section { background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-main) 100%); padding: 0 0 20px 0; }
-.video-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
-.video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
-.video-cta { text-align: center; margin-top: 20px; }
+/* ── GALERIE PLATS ── */
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
+.gallery-item { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); position: relative; aspect-ratio: 4/3; background: var(--color-light); }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; display: block; }
+.gallery-item:hover img { transform: scale(1.05); }
+.gallery-caption { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.6)); color: white; padding: 20px 12px 10px; font-size: 13px; font-weight: 700; }
 
+/* ── CARROUSEL CARTE ── */
+.carousel-wrap { position: relative; max-width: 780px; margin: 0 auto; user-select: none; }
+.carousel-track-outer { overflow: hidden; border-radius: var(--radius); box-shadow: var(--shadow); background: #000; }
+.carousel-track { display: flex; transition: transform 0.4s cubic-bezier(.4,0,.2,1); }
+.carousel-slide { flex: 0 0 100%; }
+.carousel-slide img { width: 100%; max-height: 560px; object-fit: contain; display: block; background: #111; }
+.carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(127,29,29,0.82); border: none; color: white; font-size: 28px; width: 48px; height: 48px; border-radius: 50%; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; transition: background 0.2s; line-height: 1; }
+.carousel-btn:hover { background: var(--color-main); }
+.carousel-btn.prev { left: -22px; }
+.carousel-btn.next { right: -22px; }
+@media (max-width: 640px) { .carousel-btn.prev { left: 6px; } .carousel-btn.next { right: 6px; } }
+.carousel-dots { display: flex; justify-content: center; gap: 8px; margin-top: 16px; }
+.carousel-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--color-border); border: none; cursor: pointer; transition: background 0.2s, transform 0.2s; padding: 0; }
+.carousel-dot.active { background: var(--color-main); transform: scale(1.3); }
+.carousel-counter { text-align: center; font-size: 13px; color: var(--muted); font-weight: 700; margin-top: 10px; }
+
+/* ── LIGHTBOX ── */
+.lightbox { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,0.92); align-items: center; justify-content: center; padding: 20px; }
+.lightbox.open { display: flex; }
+.lightbox img { max-width: 90vw; max-height: 88vh; border-radius: 12px; object-fit: contain; }
+.lightbox-close { position: fixed; top: 18px; right: 24px; font-size: 36px; color: white; cursor: pointer; line-height: 1; z-index: 10000; }
+.lightbox-prev, .lightbox-next { position: fixed; top: 50%; transform: translateY(-50%); font-size: 42px; color: white; cursor: pointer; background: rgba(255,255,255,0.12); border: none; border-radius: 50%; width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; z-index: 10000; transition: background 0.2s; }
+.lightbox-prev { left: 14px; }
+.lightbox-next { right: 14px; }
+.lightbox-prev:hover, .lightbox-next:hover { background: rgba(255,255,255,0.25); }
+
+/* ── GALERIE ÉVÉNEMENTS ── */
+.events-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+.event-card { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); background: var(--white); border: 1.5px solid var(--color-border); }
+.event-card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
+.event-body { padding: 18px; }
+.event-tag { display: inline-block; font-size: 10px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; margin-bottom: 8px; background: var(--color-light); color: var(--color-dark); }
+.event-body h3 { font-size: 18px; font-weight: 800; color: var(--dark); margin-bottom: 8px; }
+.event-body p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+/* ── AVIS ── */
 .rating-bar { display: flex; align-items: center; gap: 16px; background: var(--color-light); border: 1.5px solid var(--color-border); border-radius: var(--radius); padding: 16px 20px; margin-bottom: 24px; max-width: 400px; }
 .rating-score { font-size: 52px; font-weight: 900; color: var(--color-main); line-height: 1; }
 .rating-info .stars { color: #f59e0b; font-size: 20px; }
@@ -133,6 +149,7 @@ nav { position: sticky; top: 0; z-index: 999; background: var(--white); border-b
 .btn-more { display: block; text-align: center; padding: 14px; border-radius: 12px; font-size: 14px; font-weight: 700; color: var(--color-main); background: var(--color-light); border: 1.5px solid var(--color-border); text-decoration: none; transition: all 0.2s; max-width: 320px; margin: 0 auto; }
 .btn-more:hover { background: var(--color-main); color: white; }
 
+/* ── FORMULAIRE ── */
 .forms-inner { max-width: 640px; margin: 0 auto; }
 .form-card { background: var(--white); border: 1.5px solid var(--color-border); border-radius: var(--radius); padding: 28px 24px; box-shadow: var(--shadow); }
 .form-group { margin-bottom: 16px; }
@@ -148,27 +165,39 @@ nav { position: sticky; top: 0; z-index: 999; background: var(--white); border-b
 .form-or { text-align: center; margin: 20px 0; position: relative; font-size: 12px; color: var(--muted); font-weight: 700; letter-spacing: 1px; }
 .form-or::before { content: ''; position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: var(--color-border); }
 .form-or span { background: var(--white); padding: 0 14px; position: relative; z-index: 1; }
-.btn-wa-full { display: flex; align-items: center; justify-content: center; gap: 10px; background: var(--green); color: white; padding: 14px; border-radius: 12px; font-size: 15px; font-weight: 800; text-decoration: none; transition: transform 0.2s; }
+.btn-wa-full { display: flex; align-items: center; justify-content: center; gap: 10px; background: var(--green); color: white; padding: 14px; border-radius: 12px; font-size: 15px; font-weight: 800; text-decoration: none; transition: transform 0.2s; margin-bottom: 10px; }
 .btn-wa-full:hover { transform: translateY(-1px); }
+.btn-fb-full { display: flex; align-items: center; justify-content: center; gap: 10px; background: #1877f2; color: white; padding: 14px; border-radius: 12px; font-size: 15px; font-weight: 800; text-decoration: none; transition: transform 0.2s; }
+.btn-fb-full:hover { transform: translateY(-1px); background: #1565c0; }
 
+/* ── FOOTER ── */
 footer { background: var(--color-light); border-top: 2px solid var(--color-border); padding: 48px 20px 28px; }
 .footer-inner { max-width: var(--max); margin: 0 auto; text-align: center; }
 .footer-logo img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--color-border); margin: 0 auto 16px; background: white; }
 .footer-name { font-size: 22px; font-weight: 900; color: var(--dark); margin-bottom: 12px; }
 .footer-info p { font-size: 13px; color: var(--muted); line-height: 2; }
 .footer-info a { color: var(--color-main); text-decoration: none; font-weight: 700; }
+.footer-horaires { display: inline-grid; grid-template-columns: auto auto; gap: 2px 18px; margin: 8px auto; font-size: 13px; color: var(--muted); text-align: left; }
+.footer-horaires .day { font-weight: 700; color: var(--dark); }
+.footer-horaires .closed { color: var(--color-main); font-weight: 800; }
 .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 20px 0 0; padding-top: 20px; border-top: 1px solid var(--color-border); }
 .footer-links a { font-size: 12px; color: var(--muted); text-decoration: none; }
 .footer-copy { font-size: 11px; color: var(--muted); margin-top: 12px; }
 
+/* ── WA FLOTTANT ── */
 .wa-float { position: fixed; bottom: 22px; right: 22px; z-index: 999; width: 60px; height: 60px; border-radius: 50%; background: var(--green); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 24px rgba(37,211,102,0.5); text-decoration: none; transition: transform 0.2s; }
 .wa-float:hover { transform: scale(1.1); }
 .ico-wa { width: 22px; height: 22px; fill: white; flex-shrink: 0; }
+
+/* ── HORAIRES HERO ── */
+.hero-horaires { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 16px; font-size: 12px; color: rgba(255,255,255,0.8); margin-top: 4px; }
+.hero-horaires span { white-space: nowrap; }
+.hero-horaires .closed-day { color: rgba(255,200,200,0.9); font-weight: 800; }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
+<!-- ═══════ NAV ═══════ -->
 <nav>
   <div class="nav-inner">
     <a href="#" class="nav-logo">
@@ -177,159 +206,218 @@ footer { background: var(--color-light); border-top: 2px solid var(--color-borde
     </a>
     <div class="nav-links">
       <a href="#">&#127968; Accueil</a>
-      <a href="#services">&#127869;&#65039; Notre Carte</a>
+      <a href="#carte">&#127869; Carte</a>
+      <a href="#plats">&#127829; Nos Plats</a>
+      <a href="evenements.html">&#127881; &#201;v&#233;nements</a>
       <a href="#avis">&#11088; Avis</a>
-      <a href="#contact">&#128203; Réserver</a>
+      <a href="#contact">&#128203; R&#233;server</a>
       <a href="https://wa.me/32472284063" class="nav-cta">
         <svg class="ico-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.126 1.535 5.862L.057 23.737a.75.75 0 00.921.921l5.875-1.478A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.886 0-3.66-.499-5.197-1.373l-.373-.217-3.876.974.993-3.768-.237-.388A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
         WhatsApp
       </a>
     </div>
-    <button class="burger" onclick="toggleMenu()" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="burger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
   <div class="mobile-menu" id="mobileMenu">
     <a href="#" onclick="toggleMenu()">&#127968; Accueil</a>
-    <a href="#services" onclick="toggleMenu()">&#127869;&#65039; Notre Carte</a>
+    <a href="#carte" onclick="toggleMenu()">&#127869; Carte</a>
+    <a href="#plats" onclick="toggleMenu()">&#127829; Nos Plats</a>
+    <a href="evenements.html">&#127881; &#201;v&#233;nements</a>
     <a href="#avis" onclick="toggleMenu()">&#11088; Avis</a>
-    <a href="#contact" onclick="toggleMenu()">&#128203; Réserver</a>
+    <a href="#contact" onclick="toggleMenu()">&#128203; R&#233;server</a>
     <a href="https://wa.me/32472284063" class="mob-cta">&#128172; WhatsApp</a>
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- ═══════ HERO ═══════ -->
 <div class="hero">
   <div class="hero-inner">
     <img class="hero-logo" src="images/logo.png" alt="La Casa du Don">
     <h1>La Casa du Don</h1>
-    <div class="hero-tagline">&#127863; Restaurant &ndash; Cuisine g&eacute;n&eacute;reuse &amp; conviviale</div>
+    <div class="hero-tagline">&#127829; Restaurant Italien &bull; Cuisine Sicilienne Maison &bull; Chaudfontaine</div>
     <div class="hero-contact">
-      <a href="tel:0472 28 40 63">&#128222; 0472 28 40 63</a>
-      <a href="mailto:david361227@gmail.com">&#9993;&#65039; david361227@gmail.com</a>
-      <span>Ouvert du mardi au dimanche &middot; &Agrave; compl&eacute;ter</span>
+      <a href="tel:+32472284063">&#128222; 0472&nbsp;28&nbsp;40&nbsp;63</a>
+      <a href="mailto:david361227@gmail.com">&#9993; david361227@gmail.com</a>
+      <div class="hero-horaires">
+        <span>Lu &middot; Ma &middot; Sa &middot; Di&nbsp;: 11h30&ndash;22h30</span>
+        <span>Ve&nbsp;: 11h30&ndash;23h00</span>
+        <span>Je&nbsp;: 18h00&ndash;22h30</span>
+        <span class="closed-day">Me&nbsp;: Ferm&#233;</span>
+      </div>
+      <span style="margin-top:4px; display:block;">&#128205; Esplanade 2, 4050 Chaudfontaine &mdash; Parking gratuit</span>
     </div>
-    <p class="hero-desc">Bienvenue &agrave; La Casa du Don, votre restaurant chaleureux o&ugrave; chaque repas est une c&eacute;l&eacute;bration. Saveurs authentiques, ambiance conviviale et service du coeur &mdash; venez partager un bon moment &agrave; table&nbsp;!</p>
+    <p class="hero-desc">Bienvenue &#224; La Casa du Don, restaurant italien authentique au c&#339;ur de Chaudfontaine. Cuisine sicilienne maison, portions g&#233;n&#233;reuses, ambiance familiale et chaleureuse &mdash; comme si vous &#233;tiez en Italie&#160;!</p>
     <div class="hero-btns">
-      <a href="#contact" class="btn-wa">
-        <svg class="ico-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.126 1.535 5.862L.057 23.737a.75.75 0 00.921.921l5.875-1.478A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.886 0-3.66-.499-5.197-1.373l-.373-.217-3.876.974.993-3.768-.237-.388A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-        R&eacute;server une table
-      </a>
-      <a href="#services" class="btn-main">&#127869;&#65039; Notre carte</a>
+      <a href="tel:+32472284063" class="btn-wa">&#128222; R&#233;server une table</a>
+      <a href="#carte" class="btn-main">&#127869; Notre carte</a>
     </div>
   </div>
 </div>
 
-<!-- CARTE -->
-<div class="section bg-white" id="services">
+<!-- ═══════ NOTRE CARTE (catégories) ═══════ -->
+<div class="section bg-white" id="carte">
   <div class="section-inner">
     <div class="section-label">Notre Carte</div>
     <h2 class="section-title">Ce que nous vous proposons</h2>
     <div class="services-grid">
 
-      <!-- CARTE 1 : PIZZAS -->
       <div class="service-card">
-        <div class="service-icon">🍕</div>
+        <div class="service-icon">&#127829;</div>
         <div class="service-body">
           <span class="service-tag">Pizzas</span>
           <h3>Pizzas Maison</h3>
-          <p>Nos pizzas préparées artisanalement avec des ingrédients frais de qualité. Pâte maison, garnitures généreuses — un vrai goût d'Italie à Chaudfontaine !</p>
-          <a href="#contact" class="service-link">Voir la carte complète →</a>
+          <p>P&#226;te maison, ingr&#233;dients frais, garnitures g&#233;n&#233;reuses. Nos pizzas sont pr&#233;par&#233;es artisanalement dans la pure tradition italienne. Un vrai go&#251;t d&#8217;Italie !</p>
+          <a href="#plats" class="service-link">Voir nos plats en photos &#8594;</a>
         </div>
       </div>
 
-      <!-- CARTE 2 : PÂTES -->
       <div class="service-card">
-        <div class="service-icon">🍝</div>
+        <div class="service-icon">&#127837;</div>
         <div class="service-body">
-          <span class="service-tag">Pâtes</span>
-          <h3>Pâtes Siciliennes</h3>
-          <p>Spaghettis aux moules à l'ail, bolognaise, carbonara... nos pâtes sont préparées maison selon les recettes traditionnelles siciliennes. Fraîches et généreuses !</p>
-          <a href="#contact" class="service-link">Voir la carte complète →</a>
+          <span class="service-tag">P&#226;tes</span>
+          <h3>P&#226;tes Siciliennes</h3>
+          <p>Spaghettis aux moules &#224; l&#8217;ail, bolognaise, carbonara&#8230; nos p&#226;tes sont pr&#233;par&#233;es maison selon les recettes traditionnelles siciliennes. Et le d&#233;fi 1&nbsp;kg de spaghettis bolognaise&nbsp;: vous relevez ?</p>
+          <a href="#plats" class="service-link">Voir nos plats en photos &#8594;</a>
         </div>
       </div>
 
-      <!-- CARTE 3 : ENTRÉES -->
       <div class="service-card">
-        <div class="service-icon">🥗</div>
+        <div class="service-icon">&#129385;</div>
         <div class="service-body">
-          <span class="service-tag">Entrées</span>
-          <h3>Antipasti &amp; Entrées</h3>
-          <p>Charcuteries italiennes, bruschette, salades fraîches et antipasti maison pour bien commencer votre repas. Produits frais sélectionnés avec soin.</p>
-          <a href="#contact" class="service-link">Voir la carte complète →</a>
+          <span class="service-tag">Viandes</span>
+          <h3>Viandes &amp; Escalopes</h3>
+          <p>Nos escalopes font l&#8217;unanimit&#233;&nbsp;: panure croustillante, texture fondante, sauce savoureuse et une portion XXL. &#201;galement des plats mijot&#233;s et grillades selon l&#8217;inspiration du chef.</p>
+          <a href="#plats" class="service-link">Voir nos plats en photos &#8594;</a>
         </div>
       </div>
 
-      <!-- CARTE 4 : DESSERTS -->
       <div class="service-card">
-        <div class="service-icon">🍰</div>
+        <div class="service-icon">&#129473;</div>
+        <div class="service-body">
+          <span class="service-tag">Antipasti</span>
+          <h3>Antipasti &amp; Entr&#233;es</h3>
+          <p>Charcuteries italiennes, bruschette, salades fra&#238;ches et antipasti maison pour bien commencer votre repas. Produits frais s&#233;lectionn&#233;s avec soin.</p>
+          <a href="#plats" class="service-link">Voir nos plats en photos &#8594;</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">&#127856;</div>
         <div class="service-body">
           <span class="service-tag">Desserts</span>
           <h3>Desserts Maison</h3>
-          <p>Tiramisu traditionnel, panna cotta, fondant au chocolat... nos desserts faits maison sont la touche finale parfaite pour terminer un repas en beauté.</p>
-          <a href="#contact" class="service-link">Voir la carte complète →</a>
+          <p>Tiramisu traditionnel, panna cotta, fondant au chocolat&#8230; nos desserts faits maison sont la touche finale parfaite. La douceur italienne dans toute sa splendeur.</p>
+          <a href="#plats" class="service-link">Voir nos plats en photos &#8594;</a>
         </div>
       </div>
 
-      <!-- CARTE 5 : SOIRÉES SPÉCIALES -->
       <div class="service-card">
-        <div class="service-icon">🎉</div>
+        <div class="service-icon">&#127863;</div>
         <div class="service-body">
-          <span class="service-tag">Soirées Spéciales</span>
-          <h3>Soirées &amp; Événements</h3>
-          <p>La Casa du Don organise régulièrement des soirées thématiques et événements spéciaux. Privatisation possible pour anniversaires, repas de famille ou fêtes. Suivez-nous sur Facebook !</p>
-          <a href="https://www.facebook.com/profile.php?id=61583702098711" target="_blank" class="service-link">Notre page Facebook →</a>
+          <span class="service-tag">Boissons</span>
+          <h3>Vins &amp; Boissons</h3>
+          <p>Vins italiens soigneusement s&#233;lectionn&#233;s, bi&#232;res, cocktails et softs pour accompagner chaque plat. Notre &#233;quipe vous conseille avec plaisir.</p>
+          <a href="#contact" class="service-link">Nous contacter &#8594;</a>
         </div>
       </div>
 
-      <!-- CARTE 6 : À EMPORTER -->
-      <div class="service-card">
-        <div class="service-icon">🥡</div>
-        <div class="service-body">
-          <span class="service-tag">À Emporter</span>
-          <h3>Commande à Emporter</h3>
-          <p>Pas le temps de vous attarder ? Appelez-nous au <strong>0472 28 40 63</strong> ou envoyez un WhatsApp et votre repas sera prêt à l'heure souhaitée.</p>
-          <a href="https://wa.me/32472284063" class="service-link">Commander sur WhatsApp →</a>
-        </div>
-      </div>
+    </div>
 
+    <!-- ── CARROUSEL CARTE (carte01 à carte08) ── -->
+    <div style="margin-top: 48px;">
+      <div class="section-label">La Carte en Images</div>
+      <h3 style="text-align:center; font-size:22px; font-weight:900; color:var(--dark); margin-bottom:28px;">Notre menu complet</h3>
+      <div class="carousel-wrap">
+        <div class="carousel-track-outer">
+          <div class="carousel-track" id="carteTrack">
+            <div class="carousel-slide"><img src="images/carte01.jpg" alt="Carte page 1"></div>
+            <div class="carousel-slide"><img src="images/carte02.jpg" alt="Carte page 2"></div>
+            <div class="carousel-slide"><img src="images/carte03.jpg" alt="Carte page 3"></div>
+            <div class="carousel-slide"><img src="images/carte04.jpg" alt="Carte page 4"></div>
+            <div class="carousel-slide"><img src="images/carte05.jpg" alt="Carte page 5"></div>
+            <div class="carousel-slide"><img src="images/carte06.jpg" alt="Carte page 6"></div>
+            <div class="carousel-slide"><img src="images/carte07.jpg" alt="Carte page 7"></div>
+            <div class="carousel-slide"><img src="images/carte08.jpg" alt="Carte page 8"></div>
+          </div>
+        </div>
+        <button class="carousel-btn prev" onclick="moveCarte(-1)" aria-label="Page précédente">&#8249;</button>
+        <button class="carousel-btn next" onclick="moveCarte(1)" aria-label="Page suivante">&#8250;</button>
+      </div>
+      <div class="carousel-dots" id="carteDots"></div>
+      <div class="carousel-counter" id="carteCounter">1 / 8</div>
     </div>
   </div>
 </div>
 
 <div class="divider"></div>
 
-<!-- VIDEO – Optionnelle, supprimer si pas de vidéo -->
-<div class="video-section" id="video">
-  <div style="max-width:800px;margin:0 auto;padding:20px;">
-    <div style="position:relative;padding-bottom:56.25%;height:0;background:rgba(255,255,255,0.08);border-radius:16px;border:2px dashed rgba(255,255,255,0.25);overflow:hidden;">
-      <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;">
-        <div style="font-size:48px;margin-bottom:12px;">&#127916;</div>
-        <div style="font-size:18px;font-weight:800;color:white;margin-bottom:6px;">Votre vid&eacute;o ici</div>
-        <div style="font-size:13px;color:rgba(255,255,255,0.6);">Remplacer VIMEO_ID par votre ID Vimeo</div>
+<!-- ═══════ NOS PLATS (galerie photos) ═══════ -->
+<div class="section" id="plats">
+  <div class="section-inner">
+    <div class="section-label">Nos Plats</div>
+    <h2 class="section-title">La cuisine en images</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item" onclick="openLightbox('plats', 0)" style="cursor:pointer;">
+        <img src="images/plat01.jpg" alt="Plat La Casa du Don" loading="lazy">
+        <div class="gallery-caption">&#127829; Sp&#233;cialit&#233; maison</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('plats', 1)" style="cursor:pointer;">
+        <img src="images/plat02.jpg" alt="Plat La Casa du Don" loading="lazy">
+        <div class="gallery-caption">&#127837; P&#226;tes siciliennes</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('plats', 2)" style="cursor:pointer;">
+        <img src="images/plat03.jpg" alt="Plat La Casa du Don" loading="lazy">
+        <div class="gallery-caption">&#129385; Viandes &amp; grillades</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('plats', 3)" style="cursor:pointer;">
+        <img src="images/plat04.jpg" alt="Plat La Casa du Don" loading="lazy">
+        <div class="gallery-caption">&#129345; Antipasti</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('plats', 4)" style="cursor:pointer;">
+        <img src="images/plat05.jpg" alt="Plat La Casa du Don" loading="lazy">
+        <div class="gallery-caption">&#127856; Desserts maison</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('plats', 5)" style="cursor:pointer;">
+        <img src="images/plat06.jpg" alt="Plat La Casa du Don" loading="lazy">
+        <div class="gallery-caption">&#127863; Vins &amp; boissons</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('plats', 6)" style="cursor:pointer;">
+        <img src="images/plat07.jpg" alt="Plat La Casa du Don" loading="lazy">
+        <div class="gallery-caption">&#127859; Suggestion du chef</div>
       </div>
     </div>
-  </div>
-  <div class="video-cta">
-    <a href="#contact" class="btn-wa" style="display:inline-flex;margin-top:16px;">
-      <svg class="ico-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.126 1.535 5.862L.057 23.737a.75.75 0 00.921.921l5.875-1.478A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.886 0-3.66-.499-5.197-1.373l-.373-.217-3.876.974.993-3.768-.237-.388A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-      R&eacute;server ma table&nbsp;!
-    </a>
   </div>
 </div>
 
 <div class="divider"></div>
 
-<!-- AVIS -->
+<!-- ═══════ TEASER ÉVÉNEMENTS ═══════ -->
+<div class="section" id="evenements" style="background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-main) 100%); text-align:center; padding: 60px 20px;">
+  <div class="section-inner">
+    <div style="font-size:11px; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.7); margin-bottom:8px;">&#201;v&#233;nements</div>
+    <h2 style="font-size:30px; font-weight:900; color:white; margin-bottom:16px;">Soir&#233;es Sp&#233;ciales &amp; &#201;v&#233;nements</h2>
+    <p style="font-size:15px; color:rgba(255,255,255,0.85); max-width:560px; margin:0 auto 32px; line-height:1.7;">Soir&#233;es th&#233;matiques, La Table du Don, privatisations&#8230; La Casa du Don anime votre agenda toute l&#8217;ann&#233;e&#160;!</p>
+    <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-bottom:20px;">
+      <img src="images/evenement01.jpg" alt="&#201;v&#233;nement 1" style="width:220px; height:140px; object-fit:cover; border-radius:12px; border:3px solid rgba(255,255,255,0.3); box-shadow:0 4px 20px rgba(0,0,0,0.3);">
+      <img src="images/evenement02.jpg" alt="&#201;v&#233;nement 2" style="width:220px; height:140px; object-fit:cover; border-radius:12px; border:3px solid rgba(255,255,255,0.3); box-shadow:0 4px 20px rgba(0,0,0,0.3);">
+      <img src="images/evenement03.jpg" alt="&#201;v&#233;nement 3" style="width:220px; height:140px; object-fit:cover; border-radius:12px; border:3px solid rgba(255,255,255,0.3); box-shadow:0 4px 20px rgba(0,0,0,0.3);">
+    </div>
+    <a href="evenements.html" class="btn-main" style="margin:0 auto;">&#127881; Voir tous nos &#233;v&#233;nements</a>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════ AVIS (10) ═══════ -->
 <div class="section bg-white" id="avis">
   <div class="section-inner">
     <div class="section-label">Avis Clients</div>
-    <h2 class="section-title">Ce qu&rsquo;ils disent de nous</h2>
+    <h2 class="section-title">Ce qu&#8217;ils disent de nous</h2>
     <div class="rating-bar">
       <div class="rating-score">4.3</div>
       <div class="rating-info">
-        <div class="stars">★★★★☆</div>
-        <div class="rtxt">Très bien · 40 avis</div>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        <div class="rtxt">Tr&#232;s bien &ndash; 50 avis</div>
         <small>sur Google Reviews</small>
       </div>
     </div>
@@ -338,113 +426,291 @@ footer { background: var(--color-light); border-top: 2px solid var(--color-borde
       <div class="review-card">
         <div class="review-header">
           <div class="review-avatar">WK</div>
-          <div><div class="review-name">Willy Ketelslegers</div><div class="review-stars">★★★★★</div></div>
+          <div><div class="review-name">Willy Ketelslegers</div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
           <div class="review-date">Avr. 2026</div>
         </div>
-        <p class="review-text">"Nous avons très bien mangé, des produits frais et délicieux, vraiment le top du top et pas cher. Restaurant calme avec un service au top, les serveuses sont à votre écoute et un patron très familial. Je recommande ce restaurant à 200 % !"</p>
+        <p class="review-text">&#171;&#160;Nous avons tr&#232;s bien mang&#233;, des produits frais et d&#233;licieux, vraiment le top du top et pas cher. Restaurant calme avec un service au top, les serveuses sont &#224; votre &#233;coute et un patron tr&#232;s familial. Je recommande ce restaurant &#224; 200&#160;%&#160;!&#160;&#187;</p>
       </div>
 
       <div class="review-card">
         <div class="review-header">
           <div class="review-avatar">PT</div>
-          <div><div class="review-name">Philippe Tomaszewsky</div><div class="review-stars">★★★★★</div></div>
-          <div class="review-date">Fév. 2026</div>
+          <div><div class="review-name">Philippe Tomaszewsky</div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
+          <div class="review-date">F&#233;v. 2026</div>
         </div>
-        <p class="review-text">"Excellente expérience à La Casa du Don ! Cuisine italienne de qualité, plats généreux et savoureux. J'ai mangé des spaghettis aux moules à l'ail, un vrai délice. Accueil chaleureux, service convivial et patron très sympathique. Adresse à recommander sans hésitation."</p>
+        <p class="review-text">&#171;&#160;Excellente exp&#233;rience &#224; La Casa du Don&#160;! Cuisine italienne de qualit&#233;, plats g&#233;n&#233;reux et savoureux. J&#8217;ai mang&#233; des spaghettis aux moules &#224; l&#8217;ail, un vrai d&#233;lice. Accueil chaleureux, service convivial et patron tr&#232;s sympathique. Adresse &#224; recommander sans h&#233;sitation.&#160;&#187;</p>
       </div>
 
       <div class="review-card">
         <div class="review-header">
-          <div class="review-avatar">🌐</div>
-          <div><div class="review-name">Restaurant Guru</div><div class="review-stars">★★★★★</div></div>
-          <div class="review-date">2026</div>
+          <div class="review-avatar">MD</div>
+          <div><div class="review-name">Mr &amp; Mme Deville-Derval</div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div></div>
+          <div class="review-date">Mars 2026</div>
         </div>
-        <p class="review-text">"La Casa du Don est idéale pour une expérience culinaire italienne chaleureuse et décontractée, avec des portions généreuses et un accueil personnalisé. Familles, groupes d'amis et couples s'y sentiront comme chez eux."</p>
+        <p class="review-text">&#171;&#160;Premi&#232;re visite en famille. Points positifs&#160;: ambiance sympathique, espace entre les tables, prix tr&#232;s corrects, grand parking. Content d&#8217;y avoir &#233;t&#233;, une bonne adresse italienne &#224; Chaudfontaine.&#160;&#187;</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">SF</div>
+          <div><div class="review-name">Sophie F.</div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
+          <div class="review-date">Avr. 2026</div>
+        </div>
+        <p class="review-text">&#171;&#160;L&#8217;escalope &#233;tait tout simplement l&#8217;une des meilleures que j&#8217;aie jamais mang&#233;es. Panure croustillante, fondante &#224; l&#8217;int&#233;rieur, sauce savoureuse &mdash; et une portion XXL&#160;! Le patron est aux petits soins. On reviendra sans h&#233;siter.&#160;&#187;</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">JL</div>
+          <div><div class="review-name">Jean-Luc M.</div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
+          <div class="review-date">Mars 2026</div>
+        </div>
+        <p class="review-text">&#171;&#160;Test&#233; le d&#233;fi spaghettis bolognaise 1&#160;kg&#160;: immense, d&#233;licieux et bien relev&#233;&#160;! Ambiance de trattoria italienne comme on l&#8217;aime, avec un patron vraiment sympa qui vient vous saluer. Portions ultra-g&#233;n&#233;reuses.&#160;&#187;</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">NB</div>
+          <div><div class="review-name">Nathalie B.</div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
+          <div class="review-date">F&#233;v. 2026</div>
+        </div>
+        <p class="review-text">&#171;&#160;On a essay&#233; la Table du Don (menu surprise du chef) et c&#8217;&#233;tait une tr&#232;s belle exp&#233;rience&#160;! Chaque plat &#233;tait une d&#233;couverte. Atmosph&#232;re chaleureuse, service attentif, vin bien choisi. Une belle soir&#233;e en famille.&#160;&#187;</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">CR</div>
+          <div><div class="review-name">C&#233;line R.</div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
+          <div class="review-date">Jan. 2026</div>
+        </div>
+        <p class="review-text">&#171;&#160;Comme si on &#233;tait en Italie&#160;! Le cadre est chaleureux, la cuisine sicilienne est authentique. Les p&#226;tes aux fruits de mer sont &#224; tomber. Le patron est pr&#233;sent, attentionn&#233; et de bonne humeur. Vraiment une bonne adresse.&#160;&#187;</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">AL</div>
+          <div><div class="review-name">Antoine &amp; Laura</div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
+          <div class="review-date">D&#233;c. 2025</div>
+        </div>
+        <p class="review-text">&#171;&#160;Repas de No&#235;l en famille tr&#232;s r&#233;ussi. Grande table bien organis&#233;e, accueil impeccable, plats g&#233;n&#233;reux et savoureux. Le tiramisu maison &#233;tait exceptionnel&#160;! On recommande vivement pour les repas de groupe.&#160;&#187;</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">LV</div>
+          <div><div class="review-name">Laura V.</div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
+          <div class="review-date">Nov. 2025</div>
+        </div>
+        <p class="review-text">&#171;&#160;Soir&#233;e sp&#233;ciale organis&#233;e par le restaurant&#160;: une super ambiance, de bons plats italiens et un patron tr&#232;s impliqu&#233;. On suit leur page Facebook pour ne rater aucune soir&#233;e. Une valeur s&#251;re &#224; Chaudfontaine&#160;!&#160;&#187;</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">PD</div>
+          <div><div class="review-name">Pierre D.</div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
+          <div class="review-date">Nov. 2025</div>
+        </div>
+        <p class="review-text">&#171;&#160;Tr&#232;s bonne pizza maison, p&#226;te fine et croustillante. Rapport qualit&#233;-prix imbattable dans la r&#233;gion. Personnel souriant et efficace. On ne regrette pas d&#8217;avoir d&#233;couvert cette adresse &mdash; et le parking gratuit, c&#8217;est un vrai plus&#160;!&#160;&#187;</p>
       </div>
 
     </div>
-    <!-- Remplacer PLACE_ID par l'ID Google Maps du restaurant -->
-    <a href="https://search.google.com/local/reviews?placeid=PLACE_ID" target="_blank" class="btn-more">Voir tous les avis Google &#8599;</a>
+    <a href="https://share.google/IN2yDdHd1R0WNYiG4" target="_blank" class="btn-more">Voir tous les 50 avis Google &#8599;</a>
   </div>
 </div>
 
 <div class="divider"></div>
 
-<!-- FORMULAIRE RÉSERVATION -->
+<!-- ═══════ CONTACT ═══════ -->
 <div class="section" id="contact">
-  <div class="section-label">R&eacute;servation &amp; Contact</div>
-  <h2 class="section-title">R&eacute;servez votre table&nbsp;!</h2>
+  <div class="section-label">R&#233;servation &amp; Contact</div>
+  <h2 class="section-title">R&#233;servez votre table&#160;!</h2>
   <div class="forms-inner">
     <div class="form-card">
-      <!-- Remplacer FORMSPREE_ID -->
       <form action="https://formspree.io/f/FORMSPREE_ID" method="POST" onsubmit="handleSubmit(event,'success-contact')">
         <div class="form-row">
-          <div class="form-group"><label>Pr&eacute;nom *</label><input type="text" name="prenom" required placeholder="Philippe"></div>
+          <div class="form-group"><label>Pr&#233;nom *</label><input type="text" name="prenom" required placeholder="Philippe"></div>
           <div class="form-group"><label>Nom *</label><input type="text" name="nom" required placeholder="Dupont"></div>
         </div>
         <div class="form-group"><label>Email *</label><input type="email" name="email" required placeholder="vous@exemple.be"></div>
-        <div class="form-group"><label>T&eacute;l&eacute;phone *</label><input type="tel" name="telephone" required placeholder="+32 4xx xx xx xx"></div>
+        <div class="form-group"><label>T&#233;l&#233;phone *</label><input type="tel" name="telephone" required placeholder="+32 4xx xx xx xx"></div>
         <div class="form-group">
           <label>Type de demande</label>
           <select name="sujet">
-            <option>R&eacute;servation de table</option>
-            <option>Commande &agrave; emporter</option>
-            <option>Privatisation / &Eacute;v&eacute;nement</option>
-            <option>Renseignement g&eacute;n&eacute;ral</option>
+            <option>&#x1FA91; R&#233;servation de table</option>
+            <option>&#127881; Privatisation / &#201;v&#233;nement</option>
+            <option>&#9733; Soir&#233;e sp&#233;ciale / Table du Don</option>
+            <option>&#8505; Renseignement g&#233;n&#233;ral</option>
           </select>
         </div>
-        <div class="form-group"><label>Votre message</label><textarea name="message" placeholder="Nombre de personnes, date souhait&eacute;e, allergies, demandes sp&eacute;ciales..."></textarea></div>
+        <div class="form-group"><label>Votre message</label><textarea name="message" placeholder="Nombre de personnes, date et heure souhait&#233;es, allergies, demandes sp&#233;ciales&#8230;"></textarea></div>
         <input type="hidden" name="_subject" value="Nouvelle demande - La Casa du Don">
         <input type="hidden" name="_language" value="fr">
-        <button type="submit" class="btn-submit">Envoyer ma demande</button>
-        <div id="success-contact" class="form-success">Merci ! Nous vous recontactons tr&egrave;s vite pour confirmer votre r&eacute;servation.</div>
+        <button type="submit" class="btn-submit">&#9989; Envoyer ma demande</button>
+        <div id="success-contact" class="form-success">&#9989; Merci&#160;! Nous vous recontactons tr&#232;s vite pour confirmer votre r&#233;servation.</div>
       </form>
       <div class="form-or"><span>OU</span></div>
       <a href="https://wa.me/32472284063?text=Bonjour%20La%20Casa%20du%20Don%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20!" class="btn-wa-full">
         <svg class="ico-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.126 1.535 5.862L.057 23.737a.75.75 0 00.921.921l5.875-1.478A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.886 0-3.66-.499-5.197-1.373l-.373-.217-3.876.974.993-3.768-.237-.388A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-        R&eacute;server sur WhatsApp
+        R&#233;server sur WhatsApp
       </a>
-      <a href="https://www.facebook.com/profile.php?id=61583702098711" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:10px;background:#1877f2;color:white;padding:14px;border-radius:12px;font-size:15px;font-weight:800;text-decoration:none;margin-top:12px;">
+      <a href="https://www.facebook.com/profile.php?id=61583702098711" target="_blank" class="btn-fb-full">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-        Suivre sur Facebook
+        Notre page Facebook
       </a>
     </div>
   </div>
 </div>
 
-<!-- FOOTER -->
+<!-- ═══════ FOOTER ═══════ -->
 <footer>
   <div class="footer-inner">
     <div class="footer-logo"><img src="images/logo.png" alt="La Casa du Don"></div>
     <div class="footer-name">La Casa du Don</div>
     <div class="footer-info">
-      <p>🍕 Restaurant Italien &ndash; Cuisine Sicilienne Maison</p>
-      <p><a href="tel:0472 28 40 63">0472 28 40 63</a> &middot; <a href="mailto:david361227@gmail.com">david361227@gmail.com</a></p>
-      <p>Esplanade 2, 4050 Chaudfontaine &ndash; Parking gratuit</p>
-      <p>Ouvert du mardi au dimanche &middot; &Agrave; compl&eacute;ter</p>
+      <p>&#127829; Restaurant Italien &ndash; Cuisine Sicilienne Maison</p>
+      <p><a href="tel:+32472284063">0472&nbsp;28&nbsp;40&nbsp;63</a> &middot; <a href="mailto:david361227@gmail.com">david361227@gmail.com</a></p>
+      <p>&#128205; Esplanade 2, 4050 Chaudfontaine &ndash; Parking gratuit</p>
+      <div class="footer-horaires">
+        <span class="day">Lundi</span><span>11h30 &ndash; 22h30</span>
+        <span class="day">Mardi</span><span>11h30 &ndash; 22h30</span>
+        <span class="day closed">Mercredi</span><span class="closed">Ferm&#233;</span>
+        <span class="day">Jeudi</span><span>18h00 &ndash; 22h30</span>
+        <span class="day">Vendredi</span><span>11h30 &ndash; 23h00</span>
+        <span class="day">Samedi</span><span>11h30 &ndash; 22h30</span>
+        <span class="day">Dimanche</span><span>11h30 &ndash; 22h30</span>
+      </div>
+      <p style="margin-top:8px;"><a href="https://www.facebook.com/profile.php?id=61583702098711" target="_blank">&#128196; Suivez-nous sur Facebook</a></p>
     </div>
     <div class="footer-links">
-      <a href="https://phil-fixit.be">Site cr&eacute;&eacute; par Phil-Fixit</a>
-      <a href="#">Mentions l&eacute;gales</a>
+      <a href="https://phil-fixit.be">Site cr&#233;&#233; par Phil-Fixit</a>
+      <a href="#">Mentions l&#233;gales</a>
     </div>
-    <div class="footer-copy">&copy; 2026 La Casa du Don &middot; Tous droits r&eacute;serv&eacute;s</div>
+    <div class="footer-copy">&#169; 2026 La Casa du Don &middot; Tous droits r&#233;serv&#233;s</div>
   </div>
 </footer>
 
-<!-- WA FLOTTANT -->
-<a href="https://wa.me/32472284063" class="wa-float" target="_blank">
+<!-- ═══════ WA FLOTTANT ═══════ -->
+<a href="https://wa.me/32472284063" class="wa-float" target="_blank" aria-label="WhatsApp">
   <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.126 1.535 5.862L.057 23.737a.75.75 0 00.921.921l5.875-1.478A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.886 0-3.66-.499-5.197-1.373l-.373-.217-3.876.974.993-3.768-.237-.388A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
 </a>
 
+<!-- ═══════ LIGHTBOX ═══════ -->
+<div class="lightbox" id="lightbox" onclick="closeLightboxOutside(event)">
+  <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+  <button class="lightbox-prev" onclick="moveLightbox(-1)">&#8249;</button>
+  <img id="lightboxImg" src="" alt="Agrandir">
+  <button class="lightbox-next" onclick="moveLightbox(1)">&#8250;</button>
+</div>
+
 <script>
+/* ── MENU NAV ── */
+/* ── SERVICE WORKER ── */
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then(reg => {
+        console.log('[SW] Enregistré :', reg.scope);
+        /* Détecte une mise à jour disponible */
+        reg.addEventListener('updatefound', () => {
+          const newWorker = reg.installing;
+          newWorker.addEventListener('statechange', () => {
+            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+              /* Nouveau contenu disponible – on active silencieusement */
+              newWorker.postMessage({ action: 'skipWaiting' });
+            }
+          });
+        });
+      })
+      .catch(err => console.warn('[SW] Erreur :', err));
+  });
+}
+
 function toggleMenu() {
   document.getElementById('mobileMenu').classList.toggle('open');
 }
-function handleSubmit(e, successId) {
+
+/* ── FORM ── */
+function handleSubmit(e, id) {
   e.preventDefault();
-  fetch(e.target.action, { method:'POST', body:new FormData(e.target), headers:{'Accept':'application/json'} })
-    .then(r => { if(r.ok) { e.target.reset(); document.getElementById(successId).style.display='block'; } });
+  fetch(e.target.action, { method:'POST', body: new FormData(e.target), headers:{'Accept':'application/json'} })
+    .then(r => { if(r.ok) { e.target.reset(); document.getElementById(id).style.display='block'; } });
 }
+
+/* ── CARROUSEL CARTE ── */
+(function() {
+  const total = 8;
+  let cur = 0;
+  const track = document.getElementById('carteTrack');
+  const dotsEl = document.getElementById('carteDots');
+  const counter = document.getElementById('carteCounter');
+
+  // Build dots
+  for (let i = 0; i < total; i++) {
+    const d = document.createElement('button');
+    d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', 'Page ' + (i+1));
+    d.onclick = () => goTo(i);
+    dotsEl.appendChild(d);
+  }
+
+  function goTo(n) {
+    cur = (n + total) % total;
+    track.style.transform = 'translateX(-' + (cur * 100) + '%)';
+    dotsEl.querySelectorAll('.carousel-dot').forEach((d, i) => d.classList.toggle('active', i === cur));
+    counter.textContent = (cur + 1) + ' / ' + total;
+  }
+
+  window.moveCarte = function(dir) { goTo(cur + dir); };
+
+  // Swipe support
+  let startX = 0;
+  const outer = track.parentElement;
+  outer.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, {passive:true});
+  outer.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 40) goTo(cur + (dx < 0 ? 1 : -1));
+  }, {passive:true});
+
+  // Keyboard on focus
+  outer.setAttribute('tabindex','0');
+  outer.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft') goTo(cur - 1);
+    if (e.key === 'ArrowRight') goTo(cur + 1);
+  });
+})();
+
+/* ── LIGHTBOX PLATS ── */
+const galleries = {
+  plats: ['images/plat01.jpg','images/plat02.jpg','images/plat03.jpg','images/plat04.jpg','images/plat05.jpg','images/plat06.jpg','images/plat07.jpg']
+};
+let currentGallery = 'plats';
+let currentIndex = 0;
+
+function openLightbox(gallery, index) {
+  currentGallery = gallery;
+  currentIndex = index;
+  document.getElementById('lightboxImg').src = galleries[gallery][index];
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function closeLightboxOutside(e) {
+  if (e.target === document.getElementById('lightbox')) closeLightbox();
+}
+function moveLightbox(dir) {
+  const arr = galleries[currentGallery];
+  currentIndex = (currentIndex + dir + arr.length) % arr.length;
+  document.getElementById('lightboxImg').src = arr[currentIndex];
+}
+document.addEventListener('keydown', e => {
+  if (!document.getElementById('lightbox').classList.contains('open')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') moveLightbox(-1);
+  if (e.key === 'ArrowRight') moveLightbox(1);
+});
 </script>
 </body>
 </html>
