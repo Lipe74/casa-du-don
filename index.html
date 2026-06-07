@@ -206,8 +206,7 @@ footer { background: var(--color-light); border-top: 2px solid var(--color-borde
     </a>
     <div class="nav-links">
       <a href="#">&#127968; Accueil</a>
-      <a href="#carte">&#127869; Carte</a>
-      <a href="#plats">&#127829; Nos Plats</a>
+      <a href="#carte">&#127869; Carte &amp; Plats</a>
       <a href="evenements.html">&#127881; &#201;v&#233;nements</a>
       <a href="#avis">&#11088; Avis</a>
       <a href="#contact">&#128203; R&#233;server</a>
@@ -220,8 +219,7 @@ footer { background: var(--color-light); border-top: 2px solid var(--color-borde
   </div>
   <div class="mobile-menu" id="mobileMenu">
     <a href="#" onclick="toggleMenu()">&#127968; Accueil</a>
-    <a href="#carte" onclick="toggleMenu()">&#127869; Carte</a>
-    <a href="#plats" onclick="toggleMenu()">&#127829; Nos Plats</a>
+    <a href="#carte" onclick="toggleMenu()">&#127869; Carte &amp; Plats</a>
     <a href="evenements.html">&#127881; &#201;v&#233;nements</a>
     <a href="#avis" onclick="toggleMenu()">&#11088; Avis</a>
     <a href="#contact" onclick="toggleMenu()">&#128203; R&#233;server</a>
@@ -249,143 +247,73 @@ footer { background: var(--color-light); border-top: 2px solid var(--color-borde
     <p class="hero-desc">Bienvenue &#224; La Casa du Don, restaurant italien authentique au c&#339;ur de Chaudfontaine. Cuisine sicilienne maison, portions g&#233;n&#233;reuses, ambiance familiale et chaleureuse &mdash; comme si vous &#233;tiez en Italie&#160;!</p>
     <div class="hero-btns">
       <a href="tel:+32472284063" class="btn-wa">&#128222; R&#233;server une table</a>
-      <a href="#carte" class="btn-main">&#127869; Notre carte</a>
+      <a href="#carte" class="btn-main">&#127869; Carte &amp; Plats</a>
     </div>
   </div>
 </div>
 
-<!-- ═══════ NOTRE CARTE (catégories) ═══════ -->
+<!-- ═══════ NOTRE CARTE ═══════ -->
 <div class="section bg-white" id="carte">
   <div class="section-inner">
+
+    <!-- CARROUSEL IMAGES CARTE -->
     <div class="section-label">Notre Carte</div>
-    <h2 class="section-title">Ce que nous vous proposons</h2>
-    <div class="services-grid">
-
-      <div class="service-card">
-        <div class="service-icon">&#127829;</div>
-        <div class="service-body">
-          <span class="service-tag">Pizzas</span>
-          <h3>Pizzas Maison</h3>
-          <p>P&#226;te maison, ingr&#233;dients frais, garnitures g&#233;n&#233;reuses. Nos pizzas sont pr&#233;par&#233;es artisanalement dans la pure tradition italienne. Un vrai go&#251;t d&#8217;Italie !</p>
-          <a href="#plats" class="service-link">Voir nos plats en photos &#8594;</a>
+    <h2 class="section-title">Notre menu en images</h2>
+    <div class="carousel-wrap">
+      <div class="carousel-track-outer">
+        <div class="carousel-track" id="carteTrack">
+          <div class="carousel-slide"><img src="images/carte01.jpg" alt="Carte page 1"></div>
+          <div class="carousel-slide"><img src="images/carte02.jpg" alt="Carte page 2"></div>
+          <div class="carousel-slide"><img src="images/carte03.jpg" alt="Carte page 3"></div>
+          <div class="carousel-slide"><img src="images/carte04.jpg" alt="Carte page 4"></div>
+          <div class="carousel-slide"><img src="images/carte05.jpg" alt="Carte page 5"></div>
+          <div class="carousel-slide"><img src="images/carte06.jpg" alt="Carte page 6"></div>
+          <div class="carousel-slide"><img src="images/carte07.jpg" alt="Carte page 7"></div>
+          <div class="carousel-slide"><img src="images/carte08.jpg" alt="Carte page 8"></div>
         </div>
       </div>
+      <button class="carousel-btn prev" onclick="moveCarte(-1)" aria-label="Page pr&#233;c&#233;dente">&#8249;</button>
+      <button class="carousel-btn next" onclick="moveCarte(1)" aria-label="Page suivante">&#8250;</button>
+    </div>
+    <div class="carousel-dots" id="carteDots"></div>
+    <div class="carousel-counter" id="carteCounter">1 / 8</div>
 
-      <div class="service-card">
-        <div class="service-icon">&#127837;</div>
-        <div class="service-body">
-          <span class="service-tag">P&#226;tes</span>
-          <h3>P&#226;tes Siciliennes</h3>
-          <p>Spaghettis aux moules &#224; l&#8217;ail, bolognaise, carbonara&#8230; nos p&#226;tes sont pr&#233;par&#233;es maison selon les recettes traditionnelles siciliennes. Et le d&#233;fi 1&nbsp;kg de spaghettis bolognaise&nbsp;: vous relevez ?</p>
-          <a href="#plats" class="service-link">Voir nos plats en photos &#8594;</a>
+    <!-- GALERIE PLATS -->
+    <div style="margin-top: 56px;">
+      <div class="section-label">Nos Plats</div>
+      <h3 style="text-align:center; font-size:26px; font-weight:900; color:var(--dark); margin-bottom:28px;">La cuisine en images</h3>
+      <div class="gallery-grid">
+        <div class="gallery-item" onclick="openLightbox(0)" style="cursor:pointer;">
+          <img src="images/plat01.jpg" alt="Plat La Casa du Don" loading="lazy">
+          <div class="gallery-caption">&#127829; Sp&#233;cialit&#233; maison</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(1)" style="cursor:pointer;">
+          <img src="images/plat02.jpg" alt="Plat La Casa du Don" loading="lazy">
+          <div class="gallery-caption">&#127837; P&#226;tes siciliennes</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(2)" style="cursor:pointer;">
+          <img src="images/plat03.jpg" alt="Plat La Casa du Don" loading="lazy">
+          <div class="gallery-caption">&#129385; Viandes &amp; grillades</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(3)" style="cursor:pointer;">
+          <img src="images/plat04.jpg" alt="Plat La Casa du Don" loading="lazy">
+          <div class="gallery-caption">&#129345; Antipasti</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(4)" style="cursor:pointer;">
+          <img src="images/plat05.jpg" alt="Plat La Casa du Don" loading="lazy">
+          <div class="gallery-caption">&#127856; Desserts maison</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(5)" style="cursor:pointer;">
+          <img src="images/plat06.jpg" alt="Plat La Casa du Don" loading="lazy">
+          <div class="gallery-caption">&#127863; Vins &amp; boissons</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(6)" style="cursor:pointer;">
+          <img src="images/plat07.jpg" alt="Plat La Casa du Don" loading="lazy">
+          <div class="gallery-caption">&#127859; Suggestion du chef</div>
         </div>
       </div>
-
-      <div class="service-card">
-        <div class="service-icon">&#129385;</div>
-        <div class="service-body">
-          <span class="service-tag">Viandes</span>
-          <h3>Viandes &amp; Escalopes</h3>
-          <p>Nos escalopes font l&#8217;unanimit&#233;&nbsp;: panure croustillante, texture fondante, sauce savoureuse et une portion XXL. &#201;galement des plats mijot&#233;s et grillades selon l&#8217;inspiration du chef.</p>
-          <a href="#plats" class="service-link">Voir nos plats en photos &#8594;</a>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">&#129473;</div>
-        <div class="service-body">
-          <span class="service-tag">Antipasti</span>
-          <h3>Antipasti &amp; Entr&#233;es</h3>
-          <p>Charcuteries italiennes, bruschette, salades fra&#238;ches et antipasti maison pour bien commencer votre repas. Produits frais s&#233;lectionn&#233;s avec soin.</p>
-          <a href="#plats" class="service-link">Voir nos plats en photos &#8594;</a>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">&#127856;</div>
-        <div class="service-body">
-          <span class="service-tag">Desserts</span>
-          <h3>Desserts Maison</h3>
-          <p>Tiramisu traditionnel, panna cotta, fondant au chocolat&#8230; nos desserts faits maison sont la touche finale parfaite. La douceur italienne dans toute sa splendeur.</p>
-          <a href="#plats" class="service-link">Voir nos plats en photos &#8594;</a>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">&#127863;</div>
-        <div class="service-body">
-          <span class="service-tag">Boissons</span>
-          <h3>Vins &amp; Boissons</h3>
-          <p>Vins italiens soigneusement s&#233;lectionn&#233;s, bi&#232;res, cocktails et softs pour accompagner chaque plat. Notre &#233;quipe vous conseille avec plaisir.</p>
-          <a href="#contact" class="service-link">Nous contacter &#8594;</a>
-        </div>
-      </div>
-
     </div>
 
-    <!-- ── CARROUSEL CARTE (carte01 à carte08) ── -->
-    <div style="margin-top: 48px;">
-      <div class="section-label">La Carte en Images</div>
-      <h3 style="text-align:center; font-size:22px; font-weight:900; color:var(--dark); margin-bottom:28px;">Notre menu complet</h3>
-      <div class="carousel-wrap">
-        <div class="carousel-track-outer">
-          <div class="carousel-track" id="carteTrack">
-            <div class="carousel-slide"><img src="images/carte01.jpg" alt="Carte page 1"></div>
-            <div class="carousel-slide"><img src="images/carte02.jpg" alt="Carte page 2"></div>
-            <div class="carousel-slide"><img src="images/carte03.jpg" alt="Carte page 3"></div>
-            <div class="carousel-slide"><img src="images/carte04.jpg" alt="Carte page 4"></div>
-            <div class="carousel-slide"><img src="images/carte05.jpg" alt="Carte page 5"></div>
-            <div class="carousel-slide"><img src="images/carte06.jpg" alt="Carte page 6"></div>
-            <div class="carousel-slide"><img src="images/carte07.jpg" alt="Carte page 7"></div>
-            <div class="carousel-slide"><img src="images/carte08.jpg" alt="Carte page 8"></div>
-          </div>
-        </div>
-        <button class="carousel-btn prev" onclick="moveCarte(-1)" aria-label="Page précédente">&#8249;</button>
-        <button class="carousel-btn next" onclick="moveCarte(1)" aria-label="Page suivante">&#8250;</button>
-      </div>
-      <div class="carousel-dots" id="carteDots"></div>
-      <div class="carousel-counter" id="carteCounter">1 / 8</div>
-    </div>
-  </div>
-</div>
-
-<div class="divider"></div>
-
-<!-- ═══════ NOS PLATS (galerie photos) ═══════ -->
-<div class="section" id="plats">
-  <div class="section-inner">
-    <div class="section-label">Nos Plats</div>
-    <h2 class="section-title">La cuisine en images</h2>
-    <div class="gallery-grid">
-      <div class="gallery-item" onclick="openLightbox('plats', 0)" style="cursor:pointer;">
-        <img src="images/plat01.jpg" alt="Plat La Casa du Don" loading="lazy">
-        <div class="gallery-caption">&#127829; Sp&#233;cialit&#233; maison</div>
-      </div>
-      <div class="gallery-item" onclick="openLightbox('plats', 1)" style="cursor:pointer;">
-        <img src="images/plat02.jpg" alt="Plat La Casa du Don" loading="lazy">
-        <div class="gallery-caption">&#127837; P&#226;tes siciliennes</div>
-      </div>
-      <div class="gallery-item" onclick="openLightbox('plats', 2)" style="cursor:pointer;">
-        <img src="images/plat03.jpg" alt="Plat La Casa du Don" loading="lazy">
-        <div class="gallery-caption">&#129385; Viandes &amp; grillades</div>
-      </div>
-      <div class="gallery-item" onclick="openLightbox('plats', 3)" style="cursor:pointer;">
-        <img src="images/plat04.jpg" alt="Plat La Casa du Don" loading="lazy">
-        <div class="gallery-caption">&#129345; Antipasti</div>
-      </div>
-      <div class="gallery-item" onclick="openLightbox('plats', 4)" style="cursor:pointer;">
-        <img src="images/plat05.jpg" alt="Plat La Casa du Don" loading="lazy">
-        <div class="gallery-caption">&#127856; Desserts maison</div>
-      </div>
-      <div class="gallery-item" onclick="openLightbox('plats', 5)" style="cursor:pointer;">
-        <img src="images/plat06.jpg" alt="Plat La Casa du Don" loading="lazy">
-        <div class="gallery-caption">&#127863; Vins &amp; boissons</div>
-      </div>
-      <div class="gallery-item" onclick="openLightbox('plats', 6)" style="cursor:pointer;">
-        <img src="images/plat07.jpg" alt="Plat La Casa du Don" loading="lazy">
-        <div class="gallery-caption">&#127859; Suggestion du chef</div>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -408,7 +336,7 @@ footer { background: var(--color-light); border-top: 2px solid var(--color-borde
 
 <div class="divider"></div>
 
-<!-- ═══════ AVIS (10) ═══════ -->
+<!-- ═══════ AVIS ═══════ -->
 <div class="section bg-white" id="avis">
   <div class="section-inner">
     <div class="section-label">Avis Clients</div>
@@ -450,71 +378,8 @@ footer { background: var(--color-light); border-top: 2px solid var(--color-borde
         <p class="review-text">&#171;&#160;Premi&#232;re visite en famille. Points positifs&#160;: ambiance sympathique, espace entre les tables, prix tr&#232;s corrects, grand parking. Content d&#8217;y avoir &#233;t&#233;, une bonne adresse italienne &#224; Chaudfontaine.&#160;&#187;</p>
       </div>
 
-      <div class="review-card">
-        <div class="review-header">
-          <div class="review-avatar">SF</div>
-          <div><div class="review-name">Sophie F.</div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
-          <div class="review-date">Avr. 2026</div>
-        </div>
-        <p class="review-text">&#171;&#160;L&#8217;escalope &#233;tait tout simplement l&#8217;une des meilleures que j&#8217;aie jamais mang&#233;es. Panure croustillante, fondante &#224; l&#8217;int&#233;rieur, sauce savoureuse &mdash; et une portion XXL&#160;! Le patron est aux petits soins. On reviendra sans h&#233;siter.&#160;&#187;</p>
-      </div>
-
-      <div class="review-card">
-        <div class="review-header">
-          <div class="review-avatar">JL</div>
-          <div><div class="review-name">Jean-Luc M.</div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
-          <div class="review-date">Mars 2026</div>
-        </div>
-        <p class="review-text">&#171;&#160;Test&#233; le d&#233;fi spaghettis bolognaise 1&#160;kg&#160;: immense, d&#233;licieux et bien relev&#233;&#160;! Ambiance de trattoria italienne comme on l&#8217;aime, avec un patron vraiment sympa qui vient vous saluer. Portions ultra-g&#233;n&#233;reuses.&#160;&#187;</p>
-      </div>
-
-      <div class="review-card">
-        <div class="review-header">
-          <div class="review-avatar">NB</div>
-          <div><div class="review-name">Nathalie B.</div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
-          <div class="review-date">F&#233;v. 2026</div>
-        </div>
-        <p class="review-text">&#171;&#160;On a essay&#233; la Table du Don (menu surprise du chef) et c&#8217;&#233;tait une tr&#232;s belle exp&#233;rience&#160;! Chaque plat &#233;tait une d&#233;couverte. Atmosph&#232;re chaleureuse, service attentif, vin bien choisi. Une belle soir&#233;e en famille.&#160;&#187;</p>
-      </div>
-
-      <div class="review-card">
-        <div class="review-header">
-          <div class="review-avatar">CR</div>
-          <div><div class="review-name">C&#233;line R.</div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
-          <div class="review-date">Jan. 2026</div>
-        </div>
-        <p class="review-text">&#171;&#160;Comme si on &#233;tait en Italie&#160;! Le cadre est chaleureux, la cuisine sicilienne est authentique. Les p&#226;tes aux fruits de mer sont &#224; tomber. Le patron est pr&#233;sent, attentionn&#233; et de bonne humeur. Vraiment une bonne adresse.&#160;&#187;</p>
-      </div>
-
-      <div class="review-card">
-        <div class="review-header">
-          <div class="review-avatar">AL</div>
-          <div><div class="review-name">Antoine &amp; Laura</div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
-          <div class="review-date">D&#233;c. 2025</div>
-        </div>
-        <p class="review-text">&#171;&#160;Repas de No&#235;l en famille tr&#232;s r&#233;ussi. Grande table bien organis&#233;e, accueil impeccable, plats g&#233;n&#233;reux et savoureux. Le tiramisu maison &#233;tait exceptionnel&#160;! On recommande vivement pour les repas de groupe.&#160;&#187;</p>
-      </div>
-
-      <div class="review-card">
-        <div class="review-header">
-          <div class="review-avatar">LV</div>
-          <div><div class="review-name">Laura V.</div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
-          <div class="review-date">Nov. 2025</div>
-        </div>
-        <p class="review-text">&#171;&#160;Soir&#233;e sp&#233;ciale organis&#233;e par le restaurant&#160;: une super ambiance, de bons plats italiens et un patron tr&#232;s impliqu&#233;. On suit leur page Facebook pour ne rater aucune soir&#233;e. Une valeur s&#251;re &#224; Chaudfontaine&#160;!&#160;&#187;</p>
-      </div>
-
-      <div class="review-card">
-        <div class="review-header">
-          <div class="review-avatar">PD</div>
-          <div><div class="review-name">Pierre D.</div><div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
-          <div class="review-date">Nov. 2025</div>
-        </div>
-        <p class="review-text">&#171;&#160;Tr&#232;s bonne pizza maison, p&#226;te fine et croustillante. Rapport qualit&#233;-prix imbattable dans la r&#233;gion. Personnel souriant et efficace. On ne regrette pas d&#8217;avoir d&#233;couvert cette adresse &mdash; et le parking gratuit, c&#8217;est un vrai plus&#160;!&#160;&#187;</p>
-      </div>
-
     </div>
-    <a href="https://share.google/IN2yDdHd1R0WNYiG4" target="_blank" class="btn-more">Voir tous les 50 avis Google &#8599;</a>
+    <a href="https://share.google/IN2yDdHd1R0WNYiG4" target="_blank" class="btn-more">Voir les 50 avis Google &#8599;</a>
   </div>
 </div>
 
@@ -680,16 +545,12 @@ function handleSubmit(e, id) {
 })();
 
 /* ── LIGHTBOX PLATS ── */
-const galleries = {
-  plats: ['images/plat01.jpg','images/plat02.jpg','images/plat03.jpg','images/plat04.jpg','images/plat05.jpg','images/plat06.jpg','images/plat07.jpg']
-};
-let currentGallery = 'plats';
+const platsImgs = ['images/plat01.jpg','images/plat02.jpg','images/plat03.jpg','images/plat04.jpg','images/plat05.jpg','images/plat06.jpg','images/plat07.jpg'];
 let currentIndex = 0;
 
-function openLightbox(gallery, index) {
-  currentGallery = gallery;
+function openLightbox(index) {
   currentIndex = index;
-  document.getElementById('lightboxImg').src = galleries[gallery][index];
+  document.getElementById('lightboxImg').src = platsImgs[index];
   document.getElementById('lightbox').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
@@ -701,9 +562,8 @@ function closeLightboxOutside(e) {
   if (e.target === document.getElementById('lightbox')) closeLightbox();
 }
 function moveLightbox(dir) {
-  const arr = galleries[currentGallery];
-  currentIndex = (currentIndex + dir + arr.length) % arr.length;
-  document.getElementById('lightboxImg').src = arr[currentIndex];
+  currentIndex = (currentIndex + dir + platsImgs.length) % platsImgs.length;
+  document.getElementById('lightboxImg').src = platsImgs[currentIndex];
 }
 document.addEventListener('keydown', e => {
   if (!document.getElementById('lightbox').classList.contains('open')) return;
