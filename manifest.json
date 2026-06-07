@@ -1,0 +1,21 @@
+{
+  "name": "La Casa du Don",
+  "short_name": "Casa du Don",
+  "description": "Restaurant italien authentique à Chaudfontaine. Cuisine sicilienne maison, portions généreuses. Réservez au 0472 28 40 63.",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#7f1d1d",
+  "theme_color": "#b91c1c",
+  "orientation": "portrait",
+  "lang": "fr",
+  "id": "la-casa-du-don",
+  "icons": [
+    {
+      "src": "images/logo.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
