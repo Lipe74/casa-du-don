@@ -9,13 +9,67 @@
   "theme_color": "#b91c1c",
   "orientation": "portrait",
   "lang": "fr",
-  "id": "la-casa-du-don",
+  "id": "la-casa-du-don-chaudfontaine",
+  "categories": ["food", "restaurants"],
+  "shortcuts": [
+    {
+      "name": "Réserver une table",
+      "short_name": "Réserver",
+      "description": "Appeler La Casa du Don pour réserver",
+      "url": "tel:+32472284063",
+      "icons": [{ "src": "images/logo.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Notre carte",
+      "short_name": "Carte",
+      "description": "Voir la carte du restaurant",
+      "url": "/index.html#carte",
+      "icons": [{ "src": "images/logo.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Événements & Soirées",
+      "short_name": "Événements",
+      "description": "Soirées spéciales, La Table du Don, privatisations",
+      "url": "/evenements.html",
+      "icons": [{ "src": "images/logo.png", "sizes": "192x192" }]
+    }
+  ],
   "icons": [
     {
       "src": "images/logo.png",
       "sizes": "any",
       "type": "image/png",
       "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "images/plat01.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "La Casa du Don – Nos plats"
+    },
+    {
+      "src": "images/evenement01.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "La Casa du Don – Soirées spéciales"
+    },
+    {
+      "src": "images/plat02.jpg",
+      "sizes": "750x1334",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "La Casa du Don – Cuisine italienne"
+    },
+    {
+      "src": "images/evenement02.jpg",
+      "sizes": "750x1334",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "La Casa du Don – Privatisation & événements"
     }
   ]
 }
