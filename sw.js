@@ -3,7 +3,7 @@
    ============================================================ */
 
 /* Modifier UNIQUEMENT ce numéro lors d'une mise à jour */
-const VERSION = 'v23';
+const VERSION = 'v24';
 
 const CACHE_STATIC = `lacasadudon-static-${VERSION}`;
 const CACHE_IMAGES = `lacasadudon-images-${VERSION}`;
