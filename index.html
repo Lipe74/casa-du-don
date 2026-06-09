@@ -31,7 +31,7 @@
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--dark); overflow-x: hidden; }
+body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--dark); overflow-x: hidden; padding-bottom: 70px; }
 img { max-width: 100%; display: block; }
 
 /* ── NAV ── */
@@ -199,7 +199,7 @@ footer { background: var(--color-light); border-top: 2px solid var(--color-borde
 .footer-copy { font-size: 11px; color: var(--muted); margin-top: 12px; }
 
 /* ── WA FLOTTANT ── */
-.wa-float { position: fixed; bottom: 22px; right: 22px; z-index: 999; width: 60px; height: 60px; border-radius: 50%; background: var(--green); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 24px rgba(37,211,102,0.5); text-decoration: none; transition: transform 0.2s; }
+.wa-float { position: fixed; bottom: 80px; right: 22px; z-index: 999; width: 60px; height: 60px; border-radius: 50%; background: var(--green); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 24px rgba(37,211,102,0.5); text-decoration: none; transition: transform 0.2s; }
 .wa-float:hover { transform: scale(1.1); }
 .ico-wa { width: 22px; height: 22px; fill: white; flex-shrink: 0; }
 
@@ -225,7 +225,7 @@ footer { background: var(--color-light); border-top: 2px solid var(--color-borde
       <a href="evenements.html">&#127881; &#201;v&#233;nements</a>
       <a href="#avis">&#11088; Avis</a>
       <a href="#contact">&#128203; R&#233;server</a>
-      <a href="https://wa.me/32472284063" class="nav-cta">
+      <a href="https://wa.me/32470391307" class="nav-cta">
         <svg class="ico-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.126 1.535 5.862L.057 23.737a.75.75 0 00.921.921l5.875-1.478A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.886 0-3.66-.499-5.197-1.373l-.373-.217-3.876.974.993-3.768-.237-.388A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
         WhatsApp
       </a>
@@ -239,7 +239,7 @@ footer { background: var(--color-light); border-top: 2px solid var(--color-borde
     <a href="evenements.html">&#127881; &#201;v&#233;nements</a>
     <a href="#avis" onclick="toggleMenu()">&#11088; Avis</a>
     <a href="#contact" onclick="toggleMenu()">&#128203; R&#233;server</a>
-    <a href="https://wa.me/32472284063" class="mob-cta">&#128172; WhatsApp</a>
+    <a href="https://wa.me/32470391307" class="mob-cta">&#128172; WhatsApp</a>
   </div>
 </nav>
 
@@ -463,7 +463,7 @@ footer { background: var(--color-light); border-top: 2px solid var(--color-borde
         <div id="success-contact" class="form-success">&#9989; Merci&#160;! Nous vous recontactons tr&#232;s vite pour confirmer votre r&#233;servation.</div>
       </form>
       <div class="form-or"><span>OU</span></div>
-      <a href="https://wa.me/32472284063?text=Bonjour%20La%20Casa%20du%20Don%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20!" class="btn-wa-full">
+      <a href="https://wa.me/32470391307?text=Bonjour%20La%20Casa%20du%20Don%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20!" class="btn-wa-full">
         <svg class="ico-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.126 1.535 5.862L.057 23.737a.75.75 0 00.921.921l5.875-1.478A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.886 0-3.66-.499-5.197-1.373l-.373-.217-3.876.974.993-3.768-.237-.388A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
         R&#233;server sur WhatsApp
       </a>
