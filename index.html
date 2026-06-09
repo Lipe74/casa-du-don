@@ -295,6 +295,25 @@ footer { background: var(--color-light); border-top: 2px solid var(--color-borde
         <span id="mp-note" style="font-size:20px;">🎵</span>
         <div>
           <div id="mp-title" style="font-size:12px;font-weight:800;color:#d4af37;font-family:'Nunito',sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:160px;">♪ La Casa del Don</div>
+          <div style="display:flex;align-items:center;gap:8px;margin-top:6px;">
+
+  <button onclick="mpPrev()"
+          style="background:none;border:none;color:#d4af37;font-size:18px;cursor:pointer;">
+    ⏮
+  </button>
+
+  <button id="mp-playbtn"
+          onclick="mpToggle()"
+          style="background:#d4af37;color:#111;border:none;width:38px;height:38px;border-radius:50%;font-weight:700;cursor:pointer;">
+    ▶
+  </button>
+
+  <button onclick="mpNext()"
+          style="background:none;border:none;color:#d4af37;font-size:18px;cursor:pointer;">
+    ⏭
+  </button>
+
+</div>
           <div id="mp-index" style="font-size:10px;color:rgba(255,255,255,0.6);font-family:'Nunito',sans-serif;">1 / 10</div>
         </div>
       </div>
@@ -682,7 +701,9 @@ document.addEventListener('keydown', e => {
 document.addEventListener('DOMContentLoaded', function() {
 
 const mpPlaylist = [
-  { title: "La Casa du Don", src: "musique/casa01.mp3" }
+  { title: "La Casa du Don", src: "musique/casa01.mp3" },
+  { title: "Danser avec le Don", src: "musique/casa02.mp3" },
+  { title: "La Légende du Don", src: "musique/casa03.mp3" }
 ];
 
 let mpIdx = 0, mpIsPlaying = false;
