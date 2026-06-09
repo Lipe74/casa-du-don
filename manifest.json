@@ -2,8 +2,10 @@
   "name": "La Casa du Don",
   "short_name": "Casa du Don",
   "description": "Restaurant italien authentique à Chaudfontaine. Cuisine sicilienne maison, portions généreuses. Réservez au 0472 28 40 63.",
-  "start_url": "/index.html",
-  "scope": "/",
+
+  "start_url": "./index.html",
+  "scope": "./",
+
   "display": "standalone",
 
   "background_color": "#111111",
@@ -11,38 +13,45 @@
 
   "orientation": "portrait",
   "lang": "fr",
+
   "id": "la-casa-du-don-chaudfontaine",
 
-  "categories": ["food", "restaurants"],
+  "categories": [
+    "food",
+    "restaurants"
+  ],
 
   "shortcuts": [
-    {
-      "name": "Réserver une table",
-      "short_name": "Réserver",
-      "description": "Appeler La Casa du Don pour réserver",
-      "url": "tel:+32472284063",
-      "icons": [{ "src": "images/logo.png", "sizes": "192x192" }]
-    },
     {
       "name": "Notre carte",
       "short_name": "Carte",
       "description": "Voir la carte du restaurant",
-      "url": "/index.html#carte",
-      "icons": [{ "src": "images/logo.png", "sizes": "192x192" }]
+      "url": "./index.html#carte",
+      "icons": [
+        {
+          "src": "images/logo.png",
+          "sizes": "192x192"
+        }
+      ]
     },
     {
       "name": "Événements & Soirées",
       "short_name": "Événements",
       "description": "Soirées spéciales, La Table du Don, privatisations",
-      "url": "/evenements.html",
-      "icons": [{ "src": "images/logo.png", "sizes": "192x192" }]
+      "url": "./evenements.html",
+      "icons": [
+        {
+          "src": "images/logo.png",
+          "sizes": "192x192"
+        }
+      ]
     }
   ],
 
   "icons": [
     {
-      "src": "images/logo.png",
-      "sizes": "any",
+      "src": "favicon.png",
+      "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     }
