@@ -655,40 +655,15 @@ document.addEventListener('keydown', e => {
 </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', async function() {
+document.addEventListener('DOMContentLoaded', function() {
 
-// Auto-détection des fichiers casa01.mp3 → casa99.mp3
-async function buildPlaylist() {
-  const playlist = [];
-  const checks = [];
-  for (let i = 1; i <= 99; i++) {
-    const num = String(i).padStart(2, '0');
-    const src = `/musique/casa${num}.mp3`;
-    checks.push(
-      fetch(src, { method: 'HEAD' })
-        .then(r => r.ok ? { title: `Ambiance italienne ${num}`, src } : null)
-        .catch(() => null)
-    );
-  }
-  const results = await Promise.all(checks);
-  return results.filter(Boolean);
-}
+const mpPlaylist = [
+  { title: "Ambiance italienne 01", src: "/musique/casa01.mp3" },
+  { title: "Ambiance italienne 02", src: "/musique/casa02.mp3" },
+];
 
 let mpIdx = 0, mpIsPlaying = false;
 const mpAudio = document.getElementById('mp-audio');
-let mpPlaylist = [];
-
-// Charger la playlist puis initialiser
-buildPlaylist().then(list => {
-  mpPlaylist = list;
-  if (mpPlaylist.length > 0) {
-    mpLoad(0);
-    document.getElementById('mp-index').textContent = '1 / ' + mpPlaylist.length;
-  } else {
-    document.getElementById('mp-title').textContent = '♪ Aucune piste trouvée';
-    document.getElementById('mp-index').textContent = '0 / 0';
-  }
-});
 
 function mpLoad(idx) {
   if (idx < 0) idx = mpPlaylist.length - 1;
@@ -704,7 +679,6 @@ function mpLoad(idx) {
 }
 
 window.mpToggle = function() {
-  if (!mpPlaylist.length) return;
   if (!mpAudio.src || mpAudio.src === window.location.href) mpLoad(0);
   if (mpIsPlaying) {
     mpAudio.pause();
@@ -719,8 +693,8 @@ window.mpToggle = function() {
   }
 };
 
-window.mpNext = function() { if (mpPlaylist.length) { mpLoad(mpIdx + 1); if (mpIsPlaying) mpAudio.play().catch(() => {}); } };
-window.mpPrev = function() { if (mpPlaylist.length) { mpLoad(mpIdx - 1); if (mpIsPlaying) mpAudio.play().catch(() => {}); } };
+window.mpNext = function() { mpLoad(mpIdx + 1); if (mpIsPlaying) mpAudio.play().catch(() => {}); };
+window.mpPrev = function() { mpLoad(mpIdx - 1); if (mpIsPlaying) mpAudio.play().catch(() => {}); };
 window.mpSeek = function(v) { if (mpAudio.duration) mpAudio.currentTime = (v / 100) * mpAudio.duration; };
 window.mpVolume = function(v) { mpAudio.volume = parseFloat(v); };
 
@@ -737,7 +711,9 @@ mpAudio.addEventListener('canplaythrough', () => {
   document.getElementById('mp-dur').textContent = mpFmt(mpAudio.duration);
 });
 
-}); // end DOMContentLoaded
+mpLoad(0);
+
+});
 </script>
 </body>
 </html>
