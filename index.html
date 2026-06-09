@@ -736,7 +736,21 @@ window.mpToggle = function() {
     document.getElementById('mp-note').classList.add('playing');
   }
 };
+window.mpPrev = function() {
+  mpLoad(mpIdx - 1);
 
+  if (mpIsPlaying) {
+    mpAudio.play().catch(() => {});
+  }
+};
+
+window.mpNext = function() {
+  mpLoad(mpIdx + 1);
+
+  if (mpIsPlaying) {
+    mpAudio.play().catch(() => {});
+  }
+};
 window.mpSeek = function(v) { if (mpAudio.duration) mpAudio.currentTime = (v / 100) * mpAudio.duration; };
 window.mpVolume = function(v) { mpAudio.volume = parseFloat(v); };
 
