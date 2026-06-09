@@ -658,7 +658,8 @@ document.addEventListener('keydown', e => {
 document.addEventListener('DOMContentLoaded', function() {
 
 const mpPlaylist = [
-  { title: "La Casa du Don", src: "musique/casa01.mp3" }
+  { title: "Ambiance italienne 01", src: "/musique/casa01.mp3" },
+  { title: "Ambiance italienne 02", src: "/musique/casa02.mp3" },
 ];
 
 let mpIdx = 0, mpIsPlaying = false;
@@ -714,5 +715,33 @@ mpLoad(0);
 
 });
 </script>
+
+<audio id="mp-audio" preload="metadata">
+  <source src="musique/casa01.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const mpAudio=document.getElementById('mp-audio');
+let mpPlaying=false;
+
+function mpToggle(){
+  if(mpPlaying){
+    mpAudio.pause();
+    document.getElementById('mp-playbtn').innerHTML='▶';
+    mpPlaying=false;
+  } else {
+    mpAudio.play();
+    document.getElementById('mp-playbtn').innerHTML='❚❚';
+    mpPlaying=true;
+  }
+}
+
+mpAudio.addEventListener('ended',()=>{
+  document.getElementById('mp-playbtn').innerHTML='▶';
+  mpPlaying=false;
+});
+</script>
+
 </body>
+
 </html>
