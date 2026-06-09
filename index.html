@@ -31,7 +31,7 @@
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--dark); overflow-x: hidden; padding-bottom: 70px; }
+body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--dark); overflow-x: hidden; }
 img { max-width: 100%; display: block; }
 
 /* ── NAV ── */
@@ -199,8 +199,7 @@ footer { background: var(--color-light); border-top: 2px solid var(--color-borde
 .footer-copy { font-size: 11px; color: var(--muted); margin-top: 12px; }
 
 /* ── WA FLOTTANT ── */
-.wa-float { position: fixed; bottom: 80px; right: 22px; z-index: 999; width: 60px; height: 60px; border-radius: 50%; background: var(--green); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 24px rgba(37,211,102,0.5); text-decoration: none; transition: transform 0.2s; }
-.wa-float:hover { transform: scale(1.1); }
+
 .ico-wa { width: 22px; height: 22px; fill: white; flex-shrink: 0; }
 
 /* ── HORAIRES HERO ── */
@@ -265,6 +264,34 @@ footer { background: var(--color-light); border-top: 2px solid var(--color-borde
       <a href="tel:+32472284063" class="btn-wa">&#128222; R&#233;server une table</a>
       <a href="#carte" class="btn-main">&#127869; Notre carte</a>
     </div>
+
+    <!-- ♪ Lecteur musical -->
+    <div style="margin-top:20px;background:rgba(255,255,255,0.07);border:1px solid rgba(212,175,55,0.4);border-radius:16px;padding:12px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+      <div style="display:flex;align-items:center;gap:8px;flex:1;min-width:160px;">
+        <span id="mp-note" style="font-size:20px;">🎵</span>
+        <div>
+          <div id="mp-title" style="font-size:12px;font-weight:800;color:#d4af37;font-family:'Nunito',sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:160px;">♪ La Casa del Don</div>
+          <div id="mp-index" style="font-size:10px;color:rgba(255,255,255,0.6);font-family:'Nunito',sans-serif;">1 / 10</div>
+        </div>
+      </div>
+      <div style="flex:2;min-width:120px;display:flex;flex-direction:column;gap:2px;">
+        <input id="mp-seek" type="range" min="0" max="100" value="0" oninput="mpSeek(this.value)" style="width:100%;accent-color:#d4af37;cursor:pointer;height:4px;">
+        <div style="display:flex;justify-content:space-between;">
+          <span id="mp-cur" style="font-size:10px;color:rgba(255,255,255,0.5);font-family:'Nunito',sans-serif;">0:00</span>
+          <span id="mp-dur" style="font-size:10px;color:rgba(255,255,255,0.5);font-family:'Nunito',sans-serif;">0:00</span>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:6px;flex-shrink:0;">
+        <button onclick="mpPrev()" style="background:none;border:none;color:#d4af37;font-size:18px;cursor:pointer;padding:2px 4px;line-height:1;">&#9664;&#9664;</button>
+        <button id="mp-playbtn" onclick="mpToggle()" style="background:#d4af37;border:none;border-radius:50%;width:38px;height:38px;color:#111;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:900;">&#9654;</button>
+        <button onclick="mpNext()" style="background:none;border:none;color:#d4af37;font-size:18px;cursor:pointer;padding:2px 4px;line-height:1;">&#9654;&#9654;</button>
+      </div>
+      <div style="display:flex;align-items:center;gap:6px;flex-shrink:0;">
+        <span style="font-size:14px;">🔉</span>
+        <input id="mp-vol" type="range" min="0" max="1" step="0.05" value="0.6" oninput="mpVolume(this.value)" style="width:55px;accent-color:#d4af37;cursor:pointer;height:4px;">
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -504,9 +531,7 @@ footer { background: var(--color-light); border-top: 2px solid var(--color-borde
 </footer>
 
 <!-- ═══════ WA FLOTTANT ═══════ -->
-<a href="https://wa.me/32470391307" class="wa-float" target="_blank" aria-label="WhatsApp">
-  <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.126 1.535 5.862L.057 23.737a.75.75 0 00.921.921l5.875-1.478A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.886 0-3.66-.499-5.197-1.373l-.373-.217-3.876.974.993-3.768-.237-.388A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-</a>
+
 
 <!-- ═══════ LIGHTBOX ═══════ -->
 <div class="lightbox" id="lightbox" onclick="closeLightboxOutside(event)">
@@ -621,72 +646,49 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowRight') moveLightbox(1);
 });
 <!-- ===== MUSIC PLAYER La Casa del Don ===== -->
-<div id="music-player" style="position:fixed;bottom:0;left:0;right:0;background:linear-gradient(135deg,#1a1200,#2a1f00);border-top:2px solid #d4af37;z-index:900;padding:8px 16px;display:flex;align-items:center;gap:12px;box-shadow:0 -4px 20px rgba(0,0,0,0.5);">
-
-  <!-- Icône + infos piste -->
-  <div style="flex:1;min-width:0;display:flex;align-items:center;gap:8px;">
-    <span id="mp-note" style="font-size:18px;animation:mpSpin 2s linear infinite;display:inline-block;">🎵</span>
-    <div style="min-width:0;">
-      <div id="mp-title" style="font-size:12px;font-weight:800;color:#d4af37;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-family:'Nunito',sans-serif;">♪ La Casa del Don</div>
-      <div id="mp-index" style="font-size:10px;color:#aaa;font-family:'Nunito',sans-serif;">1 / 1</div>
-    </div>
-  </div>
-
-  <!-- Progression -->
-  <div style="flex:2;display:flex;flex-direction:column;gap:2px;min-width:80px;">
-    <input id="mp-seek" type="range" min="0" max="100" value="0" oninput="mpSeek(this.value)" style="width:100%;accent-color:#d4af37;cursor:pointer;height:4px;">
-    <div style="display:flex;justify-content:space-between;">
-      <span id="mp-cur" style="font-size:10px;color:#888;font-family:'Nunito',sans-serif;">0:00</span>
-      <span id="mp-dur" style="font-size:10px;color:#888;font-family:'Nunito',sans-serif;">0:00</span>
-    </div>
-  </div>
-
-  <!-- Contrôles -->
-  <div style="display:flex;align-items:center;gap:6px;flex-shrink:0;">
-    <button onclick="mpPrev()" style="background:none;border:none;color:#d4af37;font-size:18px;cursor:pointer;padding:2px 4px;line-height:1;" title="Précédent">&#9664;&#9664;</button>
-    <button id="mp-playbtn" onclick="mpToggle()" style="background:#d4af37;border:none;border-radius:50%;width:36px;height:36px;color:#111;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:900;flex-shrink:0;">&#9654;</button>
-    <button onclick="mpNext()" style="background:none;border:none;color:#d4af37;font-size:18px;cursor:pointer;padding:2px 4px;line-height:1;" title="Suivant">&#9654;&#9654;</button>
-  </div>
-
-  <!-- Volume -->
-  <div style="display:flex;align-items:center;gap:6px;flex-shrink:0;">
-    <span style="font-size:14px;color:#d4af37;">🔉</span>
-    <input id="mp-vol" type="range" min="0" max="1" step="0.05" value="0.6" oninput="mpVolume(this.value)" style="width:55px;accent-color:#d4af37;cursor:pointer;height:4px;">
-  </div>
-
-  <!-- Masquer -->
-  <button onclick="mpHide()" style="background:none;border:none;color:#888;font-size:18px;cursor:pointer;flex-shrink:0;padding:2px;" title="Masquer">&#8964;</button>
-</div>
-
-<!-- Bouton mini quand masqué -->
-<div id="music-mini" style="display:none;position:fixed;bottom:0;right:20px;background:#d4af37;border-radius:10px 10px 0 0;padding:5px 14px;cursor:pointer;z-index:900;box-shadow:0 -2px 10px rgba(0,0,0,0.3);" onclick="mpShow()">
-  <span style="font-size:14px;color:#111;font-weight:900;font-family:'Nunito',sans-serif;">🎵</span>
-</div>
-
+<!-- ♪ Audio -->
 <audio id="mp-audio"></audio>
 
 <style>
 @keyframes mpSpin { 0%,100%{transform:rotate(-10deg)} 50%{transform:rotate(10deg)} }
-#mp-note { animation-play-state: paused; }
-#mp-note.playing { animation-play-state: running; }
+#mp-note.playing { animation: mpSpin 1.5s ease-in-out infinite; }
 </style>
 
 <script>
-const mpPlaylist = [
-  { title: "Ambiance italienne 01", src: "/musique/casa01.mp3" },
-  { title: "Ambiance italienne 02", src: "/musique/casa02.mp3" },
-  { title: "Ambiance italienne 03", src: "/musique/casa03.mp3" },
-  { title: "Ambiance italienne 04", src: "/musique/casa04.mp3" },
-  { title: "Ambiance italienne 05", src: "/musique/casa05.mp3" },
-  { title: "Ambiance italienne 06", src: "/musique/casa06.mp3" },
-  { title: "Ambiance italienne 07", src: "/musique/casa07.mp3" },
-  { title: "Ambiance italienne 08", src: "/musique/casa08.mp3" },
-  { title: "Ambiance italienne 09", src: "/musique/casa09.mp3" },
-  { title: "Ambiance italienne 10", src: "/musique/casa10.mp3" },
-];
+document.addEventListener('DOMContentLoaded', async function() {
+
+// Auto-détection des fichiers casa01.mp3 → casa99.mp3
+async function buildPlaylist() {
+  const playlist = [];
+  const checks = [];
+  for (let i = 1; i <= 99; i++) {
+    const num = String(i).padStart(2, '0');
+    const src = `/musique/casa${num}.mp3`;
+    checks.push(
+      fetch(src, { method: 'HEAD' })
+        .then(r => r.ok ? { title: `Ambiance italienne ${num}`, src } : null)
+        .catch(() => null)
+    );
+  }
+  const results = await Promise.all(checks);
+  return results.filter(Boolean);
+}
 
 let mpIdx = 0, mpIsPlaying = false;
 const mpAudio = document.getElementById('mp-audio');
+let mpPlaylist = [];
+
+// Charger la playlist puis initialiser
+buildPlaylist().then(list => {
+  mpPlaylist = list;
+  if (mpPlaylist.length > 0) {
+    mpLoad(0);
+    document.getElementById('mp-index').textContent = '1 / ' + mpPlaylist.length;
+  } else {
+    document.getElementById('mp-title').textContent = '♪ Aucune piste trouvée';
+    document.getElementById('mp-index').textContent = '0 / 0';
+  }
+});
 
 function mpLoad(idx) {
   if (idx < 0) idx = mpPlaylist.length - 1;
@@ -701,7 +703,8 @@ function mpLoad(idx) {
   document.getElementById('mp-dur').textContent = '0:00';
 }
 
-function mpToggle() {
+window.mpToggle = function() {
+  if (!mpPlaylist.length) return;
   if (!mpAudio.src || mpAudio.src === window.location.href) mpLoad(0);
   if (mpIsPlaying) {
     mpAudio.pause();
@@ -714,12 +717,13 @@ function mpToggle() {
     document.getElementById('mp-playbtn').innerHTML = '&#9646;&#9646;';
     document.getElementById('mp-note').classList.add('playing');
   }
-}
+};
 
-function mpNext() { mpLoad(mpIdx + 1); if (mpIsPlaying) mpAudio.play().catch(() => {}); }
-function mpPrev() { mpLoad(mpIdx - 1); if (mpIsPlaying) mpAudio.play().catch(() => {}); }
-function mpSeek(v) { if (mpAudio.duration) mpAudio.currentTime = (v / 100) * mpAudio.duration; }
-function mpVolume(v) { mpAudio.volume = parseFloat(v); }
+window.mpNext = function() { if (mpPlaylist.length) { mpLoad(mpIdx + 1); if (mpIsPlaying) mpAudio.play().catch(() => {}); } };
+window.mpPrev = function() { if (mpPlaylist.length) { mpLoad(mpIdx - 1); if (mpIsPlaying) mpAudio.play().catch(() => {}); } };
+window.mpSeek = function(v) { if (mpAudio.duration) mpAudio.currentTime = (v / 100) * mpAudio.duration; };
+window.mpVolume = function(v) { mpAudio.volume = parseFloat(v); };
+
 function mpFmt(s) { const m = Math.floor(s/60), sec = Math.floor(s%60); return m+':'+(sec<10?'0':'')+sec; }
 
 mpAudio.addEventListener('timeupdate', () => {
@@ -728,21 +732,12 @@ mpAudio.addEventListener('timeupdate', () => {
   document.getElementById('mp-cur').textContent = mpFmt(mpAudio.currentTime);
   document.getElementById('mp-dur').textContent = mpFmt(mpAudio.duration);
 });
-mpAudio.addEventListener('ended', () => mpNext());
+mpAudio.addEventListener('ended', () => window.mpNext());
 mpAudio.addEventListener('canplaythrough', () => {
   document.getElementById('mp-dur').textContent = mpFmt(mpAudio.duration);
 });
 
-function mpHide() {
-  document.getElementById('music-player').style.display = 'none';
-  document.getElementById('music-mini').style.display = 'block';
-}
-function mpShow() {
-  document.getElementById('music-player').style.display = 'flex';
-  document.getElementById('music-mini').style.display = 'none';
-}
-
-mpLoad(0);
+}); // end DOMContentLoaded
 </script>
 </body>
 </html>
