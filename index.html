@@ -75,11 +75,19 @@ nav { position: sticky; top: 0; z-index: 999; background: var(--white); border-b
 .hero-desc { font-size: 15px; color: rgba(255,255,255,0.85); line-height: 1.7; margin-bottom: 28px; }
 .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; padding-bottom: 20px; }
 .btn-main {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #d4af37;
-  color: #111111;}
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:#d4af37;
+  color:#111111;
+  padding:14px 24px;
+  border-radius:12px;
+  font-size:15px;
+  font-weight:800;
+  text-decoration:none;
+  box-shadow:0 4px 20px rgba(212,175,55,.35);
+  transition:transform .2s;
+}
 .btn-main:hover { transform: translateY(-2px); }
 .btn-wa { display: inline-flex; align-items: center; gap: 8px; background: var(--green); color: white; padding: 14px 24px; border-radius: 12px; font-size: 15px; font-weight: 800; text-decoration: none; box-shadow: 0 4px 20px rgba(37,211,102,0.4); transition: transform 0.2s; }
 .btn-wa:hover { transform: translateY(-2px); }
@@ -260,10 +268,18 @@ footer { background: var(--color-light); border-top: 2px solid var(--color-borde
       <span style="margin-top:4px; display:block;">&#128205; Esplanade 2, 4050 Chaudfontaine &mdash; Parking gratuit</span>
     </div>
     <p class="hero-desc">Bienvenue &#224; La Casa du Don, restaurant italien authentique au c&#339;ur de Chaudfontaine. Cuisine sicilienne maison, portions g&#233;n&#233;reuses, ambiance familiale et chaleureuse &mdash; comme si vous &#233;tiez en Italie&#160;!</p>
-    <div class="hero-btns">
-      <a href="tel:+32472284063" class="btn-wa">&#128222; R&#233;server une table</a>
-      <a href="#carte" class="btn-main">&#127869; Notre carte</a>
-    </div>
+<div class="hero-btns">
+  <a href="tel:+32472284063" class="btn-wa">📞 Réserver une table</a>
+  <a href="#carte" class="btn-main">🍽 Notre carte</a>
+</div>
+
+<div style="margin-top:20px;text-align:center;">
+  <button id="mp-playbtn"
+          onclick="mpToggle()"
+          style="background:#d4af37;color:#111;border:none;padding:12px 25px;border-radius:30px;font-weight:700;cursor:pointer;">
+      🎵 La Casa du Don
+  </button>
+</div>
 
     <!-- ♪ Lecteur musical -->
     <div style="margin-top:20px;background:rgba(255,255,255,0.07);border:1px solid rgba(212,175,55,0.4);border-radius:16px;padding:12px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
@@ -546,8 +562,8 @@ footer { background: var(--color-light); border-top: 2px solid var(--color-borde
 /* ── SERVICE WORKER ── */
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
-      .then(reg => {
+navigator.serviceWorker.register('./sw.js')
+  .then(reg => {
         console.log('[SW] Enregistré :', reg.scope);
         /* Détecte une mise à jour disponible */
         reg.addEventListener('updatefound', () => {
@@ -658,8 +674,7 @@ document.addEventListener('keydown', e => {
 document.addEventListener('DOMContentLoaded', function() {
 
 const mpPlaylist = [
-  { title: "Ambiance italienne 01", src: "/musique/casa01.mp3" },
-  { title: "Ambiance italienne 02", src: "/musique/casa02.mp3" },
+  { title: "La Casa du Don", src: "musique/casa01.mp3" }
 ];
 
 let mpIdx = 0, mpIsPlaying = false;
@@ -716,31 +731,7 @@ mpLoad(0);
 });
 </script>
 
-<audio id="mp-audio" preload="metadata">
-  <source src="musique/casa01.mp3" type="audio/mpeg">
-</audio>
 
-<script>
-const mpAudio=document.getElementById('mp-audio');
-let mpPlaying=false;
-
-function mpToggle(){
-  if(mpPlaying){
-    mpAudio.pause();
-    document.getElementById('mp-playbtn').innerHTML='▶';
-    mpPlaying=false;
-  } else {
-    mpAudio.play();
-    document.getElementById('mp-playbtn').innerHTML='❚❚';
-    mpPlaying=true;
-  }
-}
-
-mpAudio.addEventListener('ended',()=>{
-  document.getElementById('mp-playbtn').innerHTML='▶';
-  mpPlaying=false;
-});
-</script>
 
 </body>
 
