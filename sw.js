@@ -2,10 +2,8 @@
    SERVICE WORKER – La Casa du Don
    ============================================================ */
 
-const VERSION = 'v4';
-
-const CACHE_STATIC = `casa-static-${VERSION}`;
-const CACHE_IMAGES = `casa-images-${VERSION}`;
+const CACHE_STATIC = 'casa-static';
+const CACHE_IMAGES = 'casa-images';
 
 const PRECACHE_URLS = [
   './',
