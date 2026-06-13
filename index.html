@@ -48,6 +48,18 @@ nav { position: sticky; top: 0; z-index: 999; background: var(--white); border-b
 .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .nav-logo img { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; }
 .nav-logo span { font-size: 20px; font-weight: 900; color: var(--color-main); }
+  .logo-text{
+  display:flex;
+  flex-direction:column;
+  line-height:1.1;
+}
+
+.site-version{
+  font-size:10px;
+  font-weight:600;
+  color:#999;
+  margin-top:2px;
+}
 .nav-links { display: flex; align-items: center; gap: 8px; }
 .nav-links a { font-size: 13px; font-weight: 600; color: var(--muted); text-decoration: none; padding: 6px 12px; border-radius: 8px; transition: all 0.2s; }
 .nav-links a:hover { color: var(--color-main); background: var(--color-light); }
@@ -231,7 +243,12 @@ footer { background: var(--color-light); border-top: 2px solid var(--color-borde
   <div class="nav-inner">
     <a href="#" class="nav-logo">
       <img src="images/logo.png" alt="La Casa du Don">
-      <span>La Casa du Don</span>
+
+      <div class="logo-text">
+        <span>La Casa du Don</span>
+        <div class="site-version">V1.5</div>
+      </div>
+
     </a>
     <div class="nav-links">
       <a href="#">&#127968; Accueil</a>
